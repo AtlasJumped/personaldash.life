@@ -1,0 +1,117 @@
+{
+ "schema": "hmr-card/1",
+ "id": "signal",
+ "title": "Read the signal",
+ "intro": "We will open a message from a kid, see what a bare chatbot says, and then see what your own assistant says.",
+ "frame": "16:9",
+ "screen": "dashboard",
+ "cast": [
+  "milo",
+  "mom"
+ ],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is a dashboard with made-up data. Nothing is sent. We open the Bringing humans closer tab.",
+   "act": [
+    [
+     "click",
+     "tab:closer"
+    ]
+   ]
+  },
+  {
+   "say": "Milo is 13. He sent his mom a picture of a capybara with the words: this is lowkey me.",
+   "act": [
+    [
+     "move",
+     "closer.kid"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "A bare chatbot explains the words. It does not know Milo or his mom, so that is all it can do.",
+   "act": [
+    [
+     "move",
+     "closer.bare"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "Now press Read the signal. Your assistant knows Milo loves capybaras and just started at a loud new school.",
+   "act": [
+    [
+     "click",
+     "closer.signal"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "say": "It says this is a shared laugh, and it says how sure it is. It is not a request for advice.",
+   "act": [
+    [
+     "move",
+     "closer.read"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "You get three short replies in your own voice. Pick one, or change it by microphone.",
+   "act": [
+    [
+     "click",
+     "closer.opt1"
+    ],
+    [
+     "click",
+     "closer.mic"
+    ],
+    [
+     "wait",
+     1800
+    ],
+    [
+     "type",
+     "closer.draft",
+     "Love you, see you at dinner."
+    ]
+   ]
+  },
+  {
+   "say": "The demo says nothing was sent. In the real dashboard, nothing is sent until you say yes.",
+   "act": [
+    [
+     "click",
+     "closer.send"
+    ],
+    [
+     "wait",
+     900
+    ]
+   ]
+  },
+  {
+   "say": "That is the whole walkthrough. Press Replay to watch it again.",
+   "act": []
+  }
+ ],
+ "licence": "cards/signal.licence.json"
+}

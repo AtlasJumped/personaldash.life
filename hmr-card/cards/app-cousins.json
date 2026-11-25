@@ -1,0 +1,37 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-cousins",
+ "title": "Message your cousins",
+ "intro": "One made-up message to four made-up cousins.",
+ "frame": "4:5",
+ "screen": "app-cousins",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up draft to made-up cousins. Nothing is sent.",
+   "act": [
+    [
+     "move",
+     "draft"
+    ]
+   ]
+  },
+  {
+   "say": "Press Send to all.",
+   "act": [
+    [
+     "click",
+     "send"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-cousins.licence.json"
+}

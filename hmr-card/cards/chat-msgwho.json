@@ -1,0 +1,130 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-msgwho",
+ "title": "Who can message whom",
+ "intro": "We will see who can message you right away and who needs your permission first.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. We start with who you trust.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "We want people to message each other, stay in touch, and see each other's information. We think you should trust your closest friends."
+    ]
+   ]
+  },
+  {
+   "say": "Trust goes one step further.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.1.a"
+    ],
+    [
+     "type",
+     "chat.1.a",
+     "If they are good people, it makes sense to trust their judgment one step removed. Beyond that, we are not sure, so it needs permission."
+    ],
+    [
+     "show",
+     "chat.2.rows"
+    ],
+    [
+     "type",
+     "chat.2.r0",
+     "A close trusted friend|goes straight through"
+    ],
+    [
+     "click",
+     "chat.2.r0"
+    ],
+    [
+     "type",
+     "chat.2.r1",
+     "A close friend of a close friend|goes straight through"
+    ],
+    [
+     "click",
+     "chat.2.r1"
+    ],
+    [
+     "type",
+     "chat.2.r2",
+     "A friend of a friend, two steps out|needs permission"
+    ],
+    [
+     "type",
+     "chat.2.r3",
+     "Someone outside your circles|needs permission"
+    ]
+   ]
+  },
+  {
+   "say": "Someone two steps out has to ask first.",
+   "act": [
+    [
+     "show",
+     "chat.3.tap"
+    ],
+    [
+     "type",
+     "chat.3.tap",
+     "Message someone two steps out"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.3.tap"
+    ],
+    [
+     "show",
+     "chat.4.note"
+    ],
+    [
+     "type",
+     "chat.4.note",
+     "They get a short request with your reason, and they can say no."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-msgwho.licence.json"
+}

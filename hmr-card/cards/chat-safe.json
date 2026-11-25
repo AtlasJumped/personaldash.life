@@ -1,0 +1,153 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-safe",
+ "title": "Feel safer and calmer",
+ "intro": "We will share a location with one best friend, then use one button to go out of office.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. You choose who can see where you are.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "You choose who can see where you are. Off by default, person by person."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Best friend 1"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Best friend 2"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Best friend 3"
+    ]
+   ]
+  },
+  {
+   "say": "You share with one friend only.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Share with Best friend 1."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.2.u"
+    ],
+    [
+     "type",
+     "chat.2.u",
+     "Share with Best friend 1."
+    ],
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "show",
+     "chat.3.note"
+    ],
+    [
+     "type",
+     "chat.3.note",
+     "Best friend 1 gets a notification that they can now see your location. Demo only."
+    ]
+   ]
+  },
+  {
+   "say": "Next, one button for going out of office.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.4.a"
+    ],
+    [
+     "type",
+     "chat.4.a",
+     "Going out of office? One button sets your auto-reply, tells your team, hands off open items, and blocks your calendar."
+    ]
+   ]
+  },
+  {
+   "say": "You press it.",
+   "act": [
+    [
+     "show",
+     "chat.5.tap"
+    ],
+    [
+     "type",
+     "chat.5.tap",
+     "I am going out of office"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.5.tap"
+    ],
+    [
+     "show",
+     "chat.6.note"
+    ],
+    [
+     "type",
+     "chat.6.note",
+     "Done (demo). Peace of mind, no lost productivity."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-safe.licence.json"
+}

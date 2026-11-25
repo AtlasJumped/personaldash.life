@@ -1,0 +1,96 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-try",
+ "title": "Try new activities",
+ "intro": "We will see ideas matched to your free time and pick one to add to your calendar.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Your assistant suggests ideas that fit your free time.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Here is what people like you are trying. Want to try one?"
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "A beginner class near you|Saturday"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "A group walk|Sunday"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "A new recipe night with friends|Friday"
+    ]
+   ]
+  },
+  {
+   "say": "You choose the walk. You always choose.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "The walk."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.2.u"
+    ],
+    [
+     "type",
+     "chat.2.u",
+     "The walk."
+    ],
+    [
+     "click",
+     "chat.1.r1"
+    ],
+    [
+     "show",
+     "chat.3.note"
+    ],
+    [
+     "type",
+     "chat.3.note",
+     "Added to your calendar (demo). You always choose."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-try.licence.json"
+}

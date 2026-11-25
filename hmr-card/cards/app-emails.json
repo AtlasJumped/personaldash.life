@@ -1,0 +1,37 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-emails",
+ "title": "Family emails",
+ "intro": "Reorder and choose which made-up family emails get a reply.",
+ "frame": "4:5",
+ "screen": "app-emails",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up emails. Nothing is sent. Move Mom up.",
+   "act": [
+    [
+     "click",
+     "up2"
+    ]
+   ]
+  },
+  {
+   "say": "Skip Grandma, since it needs no reply.",
+   "act": [
+    [
+     "click",
+     "r5"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-emails.licence.json"
+}

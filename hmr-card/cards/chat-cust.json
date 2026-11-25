@@ -1,0 +1,160 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-cust",
+ "title": "Customer service",
+ "intro": "We will let your own AI agent call a company for you and fix a billing mistake.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. You have a billing mistake with your internet company.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "You have a billing mistake with your internet company. Today you would call and wait on their AI agent."
+    ]
+   ]
+  },
+  {
+   "say": "Your own agent will call instead.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.1.a"
+    ],
+    [
+     "type",
+     "chat.1.a",
+     "Instead, I will call them for you. I already have your account details from your dashboard, so their agent cannot block me with questions."
+    ],
+    [
+     "show",
+     "chat.2.rows"
+    ],
+    [
+     "type",
+     "chat.2.r0",
+     "Account number found|from your dashboard"
+    ],
+    [
+     "type",
+     "chat.2.r1",
+     "Billing question ready|a $30 charge you did not expect"
+    ],
+    [
+     "type",
+     "chat.2.r2",
+     "Your approval|you stay in control"
+    ]
+   ]
+  },
+  {
+   "say": "Everything it needs is ready.",
+   "act": [
+    [
+     "click",
+     "chat.2.r0"
+    ],
+    [
+     "click",
+     "chat.2.r1"
+    ],
+    [
+     "click",
+     "chat.2.r2"
+    ]
+   ]
+  },
+  {
+   "say": "You press to make the call.",
+   "act": [
+    [
+     "show",
+     "chat.3.tap"
+    ],
+    [
+     "type",
+     "chat.3.tap",
+     "Make the call"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.3.tap"
+    ],
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.4.a"
+    ],
+    [
+     "type",
+     "chat.4.a",
+     "Done. They agreed the charge was a mistake and credited you $30."
+    ]
+   ]
+  },
+  {
+   "say": "Your agent needs enough of your information to act for you.",
+   "act": [
+    [
+     "show",
+     "chat.5.note"
+    ],
+    [
+     "type",
+     "chat.5.note",
+     "Demo only. Your agent needs enough of your information to act for you. The dashboard gives it that."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-cust.licence.json"
+}

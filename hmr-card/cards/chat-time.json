@@ -1,0 +1,139 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-time",
+ "title": "Save time",
+ "intro": "We will see a ranked to-do list and answer a family email with one spoken sentence.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Each morning your assistant ranks your day.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Good morning. Here is your ranked to-do list."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Reply to Mom about Sunday"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Send the weekly recap"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Book the dentist"
+    ]
+   ]
+  },
+  {
+   "say": "You answer by talking, in one sentence.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Tell Mom I can come Sunday, and ask what to bring."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.2.u"
+    ],
+    [
+     "type",
+     "chat.2.u",
+     "Tell Mom I can come Sunday, and ask what to bring."
+    ],
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.3.a"
+    ],
+    [
+     "type",
+     "chat.3.a",
+     "Draft ready: \"Hi Mom, I can come Sunday. What should I bring?\""
+    ]
+   ]
+  },
+  {
+   "say": "You send it, and the first item is done.",
+   "act": [
+    [
+     "show",
+     "chat.4.tap"
+    ],
+    [
+     "type",
+     "chat.4.tap",
+     "Send"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.4.tap"
+    ],
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "show",
+     "chat.5.note"
+    ],
+    [
+     "type",
+     "chat.5.note",
+     "Sent (demo). One thing done by talking."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-time.licence.json"
+}

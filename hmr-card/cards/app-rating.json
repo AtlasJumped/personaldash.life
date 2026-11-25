@@ -1,0 +1,41 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-rating",
+ "title": "Your setup rating",
+ "intro": "Click through connections and watch a made-up rating rise from 36 toward 100.",
+ "frame": "4:5",
+ "screen": "app-rating",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This rating uses made-up data. Nothing is connected. It starts at 36.",
+   "act": [
+    [
+     "move",
+     "n"
+    ]
+   ]
+  },
+  {
+   "say": "Say yes to Email and Calendars and the rating rises.",
+   "act": [
+    [
+     "click",
+     "c0"
+    ],
+    [
+     "click",
+     "c1"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-rating.licence.json"
+}

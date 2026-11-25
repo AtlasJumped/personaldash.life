@@ -1,0 +1,100 @@
+{
+ "schema": "hmr-card/1",
+ "id": "reply",
+ "title": "Reply to a family email by voice",
+ "intro": "We will open the inbox, pick the email from Mom, add a few words by voice, and press Send.",
+ "frame": "16:9",
+ "screen": "dashboard",
+ "cast": [
+  "mom"
+ ],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is a dashboard with made-up data. Nothing here is real, and nothing is sent. First, we open the inbox.",
+   "act": [
+    [
+     "click",
+     "tab:inbox"
+    ]
+   ]
+  },
+  {
+   "say": "Your assistant lists the emails that need a reply. We pick the one from Mom.",
+   "act": [
+    [
+     "click",
+     "inbox.reply2"
+    ]
+   ]
+  },
+  {
+   "say": "A draft is already written for you. Read it, and edit it by typing if you like.",
+   "act": [
+    [
+     "move",
+     "inbox.draft"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "To add words by voice, turn on the microphone and talk.",
+   "act": [
+    [
+     "click",
+     "inbox.mic"
+    ],
+    [
+     "wait",
+     1800
+    ],
+    [
+     "type",
+     "inbox.draft",
+     "I land on the twentieth."
+    ]
+   ]
+  },
+  {
+   "say": "Your spoken words are added to the draft.",
+   "act": [
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "When it looks right, press Send.",
+   "act": [
+    [
+     "click",
+     "inbox.send"
+    ],
+    [
+     "wait",
+     900
+    ]
+   ]
+  },
+  {
+   "say": "The demo says nothing was sent. In the real dashboard, nothing goes out until you press Send yourself.",
+   "act": [
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "say": "That is the whole workflow. Press Replay to watch it again.",
+   "act": []
+  }
+ ],
+ "licence": "cards/reply.licence.json"
+}

@@ -1,0 +1,45 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-money",
+ "title": "Money: your subscriptions",
+ "intro": "See made-up subscriptions and what you would save by cancelling.",
+ "frame": "4:5",
+ "screen": "app-money",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up data. Nothing is cancelled.",
+   "act": [
+    [
+     "move",
+     "s0"
+    ]
+   ]
+  },
+  {
+   "say": "Uncheck two and press Submit to see the saving.",
+   "act": [
+    [
+     "click",
+     "s1"
+    ],
+    [
+     "click",
+     "s3"
+    ],
+    [
+     "click",
+     "go"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-money.licence.json"
+}

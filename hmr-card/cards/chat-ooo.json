@@ -1,0 +1,117 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-ooo",
+ "title": "Go out of office in one click",
+ "intro": "We will press one button and watch four chores get done before you leave the office.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. You are leaving on Friday.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "You are leaving on Friday. One button does the four things you would normally do by hand."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Set your email auto-reply"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Tell your team in chat"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Hand off open items to your backup"
+    ],
+    [
+     "type",
+     "chat.1.r3",
+     "Block your calendar"
+    ]
+   ]
+  },
+  {
+   "say": "You press one button, and four chores are ticked off.",
+   "act": [
+    [
+     "show",
+     "chat.2.tap"
+    ],
+    [
+     "type",
+     "chat.2.tap",
+     "I am going out of office"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.2.tap"
+    ],
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "click",
+     "chat.1.r1"
+    ],
+    [
+     "click",
+     "chat.1.r2"
+    ],
+    [
+     "click",
+     "chat.1.r3"
+    ]
+   ]
+  },
+  {
+   "say": "You can leave without losing any productivity.",
+   "act": [
+    [
+     "show",
+     "chat.3.note"
+    ],
+    [
+     "type",
+     "chat.3.note",
+     "Done (demo). Peace of mind to leave the office, without losing any productivity."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-ooo.licence.json"
+}

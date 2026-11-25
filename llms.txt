@@ -1,0 +1,15 @@
+# claudebomb
+
+> claudebomb is a free, open-source set of plain-text instructions that a person pastes into their AI assistant. The instructions set out how the person and the AI work together: the AI is truthful and direct, asks before it spends money, sends or posts in the person's name, deletes, or does anything that cannot be undone, and keeps track of what the person says.
+
+We call the text the HMR written instructions for human and AI interaction. It is the middle layer between a person in the physical world and their AI in the digital one. It is written for people who are new to AI, including older people, and it works by voice. The person's own rules sit on top of ours, and the AI company's rules come first.
+
+## Docs
+
+- [Setup guide](https://claudebomb.com/setup/claude-setup-guide.md): The full instructions a person pastes into a new chat on day one.
+- [Dashboard instructions](https://claudebomb.com/dashboard/claudebomb-dashboard.md): Instructions for the AI to build the person's personal dashboard after setup.
+- [AGENTS.md](https://claudebomb.com/setup/AGENTS.md): The written instructions in short form, for any AI assistant or agent.
+
+## Optional
+
+- [Source on GitHub](https://github.com/AtlasJumped/claudebomb.com): Source files, version history, and the place to suggest changes.

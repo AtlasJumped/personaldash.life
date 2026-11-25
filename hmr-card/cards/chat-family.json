@@ -1,0 +1,161 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-family",
+ "title": "Forge family bonds",
+ "intro": "We will pick a birthday, choose all the cousins, and send one message to everyone.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Your assistant starts the conversation.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Good morning. Grandma has a birthday in 9 days. Want me to help?"
+    ]
+   ]
+  },
+  {
+   "say": "You answer in your own words.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes. Message all my cousins about a call for her."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.1.u"
+    ],
+    [
+     "type",
+     "chat.1.u",
+     "Yes. Message all my cousins about a call for her."
+    ],
+    [
+     "show",
+     "chat.2.rows"
+    ],
+    [
+     "type",
+     "chat.2.r0",
+     "Cousin Dev"
+    ],
+    [
+     "click",
+     "chat.2.r0"
+    ],
+    [
+     "type",
+     "chat.2.r1",
+     "Cousin Mina"
+    ],
+    [
+     "click",
+     "chat.2.r1"
+    ],
+    [
+     "type",
+     "chat.2.r2",
+     "Cousin Theo"
+    ],
+    [
+     "click",
+     "chat.2.r2"
+    ],
+    [
+     "type",
+     "chat.2.r3",
+     "Cousin Ana"
+    ],
+    [
+     "click",
+     "chat.2.r3"
+    ]
+   ]
+  },
+  {
+   "say": "It drafts one message for you to check.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.3.a"
+    ],
+    [
+     "type",
+     "chat.3.a",
+     "Here is a draft: \"Hi everyone, Grandma's birthday is coming up. Want to do a video call with the whole family?\""
+    ]
+   ]
+  },
+  {
+   "say": "You press send once, and it goes to every cousin.",
+   "act": [
+    [
+     "show",
+     "chat.4.tap"
+    ],
+    [
+     "type",
+     "chat.4.tap",
+     "Send to all"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.4.tap"
+    ],
+    [
+     "show",
+     "chat.5.note"
+    ],
+    [
+     "type",
+     "chat.5.note",
+     "Sent to 4 cousins (demo). You are a little closer, in about a minute."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-family.licence.json"
+}

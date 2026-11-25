@@ -1,0 +1,85 @@
+{
+ "schema": "hmr-card/1",
+ "id": "journey",
+ "title": "See your AI journey",
+ "intro": "We will look at your accounts and habits, compare you to another profile, and ask for a tutorial.",
+ "frame": "16:9",
+ "screen": "dashboard",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is a dashboard with made-up data. Nothing is sent. We open the My AI Journey tab.",
+   "act": [
+    [
+     "click",
+     "tab:journey"
+    ]
+   ]
+  },
+  {
+   "say": "It lists the accounts and connectors in use, and what you do most.",
+   "act": [
+    [
+     "move",
+     "journey.cols"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "Pick a profile to compare yourself to. We pick a power home user.",
+   "act": [
+    [
+     "pick",
+     "journey.compare",
+     "3"
+    ],
+    [
+     "click",
+     "journey.go"
+    ]
+   ]
+  },
+  {
+   "say": "You see what is different, and one next step to consider.",
+   "act": [
+    [
+     "wait",
+     900
+    ]
+   ]
+  },
+  {
+   "say": "Now ask for a tutorial based on your usage.",
+   "act": [
+    [
+     "click",
+     "journey.tut"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "You get a short, free tutorial on one thing that would help you most.",
+   "act": [
+    [
+     "wait",
+     900
+    ]
+   ]
+  },
+  {
+   "say": "That is the whole walkthrough. Press Replay to watch it again.",
+   "act": []
+  }
+ ],
+ "licence": "cards/journey.licence.json"
+}

@@ -1,0 +1,37 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-health",
+ "title": "Health, tracked quietly",
+ "intro": "Switch made-up trackers on and off. Everything stays private.",
+ "frame": "4:5",
+ "screen": "app-health",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up data. Nothing is saved or sent.",
+   "act": [
+    [
+     "move",
+     "h0"
+    ]
+   ]
+  },
+  {
+   "say": "Switch off Meals and the count updates.",
+   "act": [
+    [
+     "click",
+     "h2"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-health.licence.json"
+}

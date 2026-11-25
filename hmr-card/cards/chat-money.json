@@ -1,0 +1,214 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-money",
+ "title": "Save money",
+ "intro": "We will look at the subscriptions found in your email, cancel one, and spot a trip price worth booking.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Your assistant lists the subscriptions it found in your email.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Here are the subscriptions I found in your email, and what they cost. Keep or cancel?"
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Streaming service A|$12 a month"
+    ],
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Music app|$11 a month"
+    ],
+    [
+     "click",
+     "chat.1.r1"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Cloud storage|$3 a month"
+    ],
+    [
+     "click",
+     "chat.1.r2"
+    ],
+    [
+     "type",
+     "chat.1.r3",
+     "Premium bundle|$30 a month"
+    ],
+    [
+     "click",
+     "chat.1.r3"
+    ]
+   ]
+  },
+  {
+   "say": "You keep all but the premium bundle, and submit.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Keep all of them except the premium bundle."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.2.u"
+    ],
+    [
+     "type",
+     "chat.2.u",
+     "Keep all of them except the premium bundle."
+    ],
+    [
+     "click",
+     "chat.1.r3"
+    ],
+    [
+     "show",
+     "chat.3.tap"
+    ],
+    [
+     "type",
+     "chat.3.tap",
+     "Submit"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.3.tap"
+    ]
+   ]
+  },
+  {
+   "say": "It starts cancelling the one you do not want.",
+   "act": [
+    [
+     "show",
+     "chat.4.note"
+    ],
+    [
+     "type",
+     "chat.4.note",
+     "We have started cancelling it. You are now saving $30 a month. Example data."
+    ]
+   ]
+  },
+  {
+   "say": "Later you say you want to save money today, and it offers a trip.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "I want to save money today."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.5.u"
+    ],
+    [
+     "type",
+     "chat.5.u",
+     "I want to save money today."
+    ],
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.6.a"
+    ],
+    [
+     "type",
+     "chat.6.a",
+     "You wanted to take a trip. The price now is the lowest I have seen in the past year. If you book for these dates, here is where you would stay, what you are close to, and an itinerary. Do you want me to book it?"
+    ]
+   ]
+  },
+  {
+   "say": "You say yes. Nothing is booked.",
+   "act": [
+    [
+     "show",
+     "chat.7.tap"
+    ],
+    [
+     "type",
+     "chat.7.tap",
+     "Yes"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.7.tap"
+    ],
+    [
+     "show",
+     "chat.8.note"
+    ],
+    [
+     "type",
+     "chat.8.note",
+     "Booking now (demo). Nothing is booked."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-money.licence.json"
+}

@@ -1,0 +1,50 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-gift",
+ "title": "Gift idea for Grandma",
+ "intro": "A made-up gift idea drafted to the cousins.",
+ "frame": "4:5",
+ "screen": "app-gift",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up draft. Nothing is sent.",
+   "act": [
+    [
+     "move",
+     "draft"
+    ]
+   ]
+  },
+  {
+   "say": "Add a line by voice and press Send.",
+   "act": [
+    [
+     "click",
+     "mic"
+    ],
+    [
+     "wait",
+     1800
+    ],
+    [
+     "type",
+     "draft",
+     "I can collect the photos this weekend."
+    ],
+    [
+     "click",
+     "send"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-gift.licence.json"
+}

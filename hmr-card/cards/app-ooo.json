@@ -1,0 +1,42 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-ooo",
+ "title": "Out of office",
+ "intro": "One click sets four things at once, with made-up settings.",
+ "frame": "4:5",
+ "screen": "app-ooo",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up settings. Nothing is changed. Pick your dates.",
+   "act": [
+    [
+     "pick",
+     "when",
+     "Next week, all week"
+    ]
+   ]
+  },
+  {
+   "say": "Press the button and each step ticks off.",
+   "act": [
+    [
+     "click",
+     "go"
+    ],
+    [
+     "wait",
+     2600
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-ooo.licence.json"
+}

@@ -1,0 +1,309 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-forgotten",
+ "title": "Forgotten family",
+ "intro": "Grandma's birthday is nine days away. We will coordinate a gift with the cousins on her side.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Nobody has started a gift for Grandma.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Grandma's birthday is nine days away. Nobody has started a gift yet, so I messaged you to start."
+    ]
+   ]
+  },
+  {
+   "say": "It picks the cousins from her side.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.1.a"
+    ],
+    [
+     "type",
+     "chat.1.a",
+     "I picked the cousins from her side of the family. You can change the list."
+    ],
+    [
+     "show",
+     "chat.2.rows"
+    ],
+    [
+     "type",
+     "chat.2.r0",
+     "Cousin Dev"
+    ],
+    [
+     "type",
+     "chat.2.r1",
+     "Cousin Mina"
+    ],
+    [
+     "type",
+     "chat.2.r2",
+     "Cousin Theo"
+    ],
+    [
+     "type",
+     "chat.2.r3",
+     "Cousin Ana"
+    ],
+    [
+     "type",
+     "chat.2.r4",
+     "Cousin Sam"
+    ],
+    [
+     "type",
+     "chat.2.r5",
+     "You"
+    ]
+   ]
+  },
+  {
+   "say": "Everyone is included.",
+   "act": [
+    [
+     "click",
+     "chat.2.r0"
+    ],
+    [
+     "click",
+     "chat.2.r1"
+    ],
+    [
+     "click",
+     "chat.2.r2"
+    ],
+    [
+     "click",
+     "chat.2.r3"
+    ],
+    [
+     "click",
+     "chat.2.r4"
+    ],
+    [
+     "click",
+     "chat.2.r5"
+    ]
+   ]
+  },
+  {
+   "say": "You suggest a gift, and it works out the cost.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "A blanket with our family photos would be perfect."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.3.u"
+    ],
+    [
+     "type",
+     "chat.3.u",
+     "A blanket with our family photos would be perfect."
+    ],
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.4.a"
+    ],
+    [
+     "type",
+     "chat.4.a",
+     "A photo blanket costs $150. Split six ways, that is $25 each. I will ask everyone to send one photo."
+    ]
+   ]
+  },
+  {
+   "say": "You send it, and six phones ping.",
+   "act": [
+    [
+     "show",
+     "chat.5.tap"
+    ],
+    [
+     "type",
+     "chat.5.tap",
+     "Send to all six"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.5.tap"
+    ],
+    [
+     "show",
+     "chat.6.ph"
+    ],
+    [
+     "type",
+     "chat.6.p0",
+     "Dev"
+    ],
+    [
+     "type",
+     "chat.6.p1",
+     "Mina"
+    ],
+    [
+     "type",
+     "chat.6.p2",
+     "Theo"
+    ],
+    [
+     "type",
+     "chat.6.p3",
+     "Ana"
+    ],
+    [
+     "type",
+     "chat.6.p4",
+     "Sam"
+    ],
+    [
+     "type",
+     "chat.6.p5",
+     "You"
+    ],
+    [
+     "type",
+     "chat.6.p0.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.6.p1.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.6.p2.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.6.p3.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.6.p4.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.6.p5.msg",
+     "New message"
+    ]
+   ]
+  },
+  {
+   "say": "Replies come in.",
+   "act": [
+    [
+     "type",
+     "chat.6.p0.rep",
+     "In. $25."
+    ],
+    [
+     "type",
+     "chat.6.p1.rep",
+     "Yes, sending a photo"
+    ],
+    [
+     "type",
+     "chat.6.p2.rep",
+     "Count me in"
+    ],
+    [
+     "type",
+     "chat.6.p3.rep",
+     "Love it"
+    ],
+    [
+     "type",
+     "chat.6.p4.rep",
+     "Great idea"
+    ],
+    [
+     "type",
+     "chat.6.p5.rep",
+     "Photo sent"
+    ]
+   ]
+  },
+  {
+   "say": "Everyone says yes.",
+   "act": [
+    [
+     "show",
+     "chat.7.note"
+    ],
+    [
+     "type",
+     "chat.7.note",
+     "Everyone said yes: $25 each. The blanket is ordered in time (demo). Grandma is remembered."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-forgotten.licence.json"
+}

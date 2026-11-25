@@ -1,0 +1,38 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-trip",
+ "title": "Plan a trip",
+ "intro": "See which week your made-up friends are free, and how the cost splits.",
+ "frame": "4:5",
+ "screen": "app-trip",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is made-up data. Nothing is booked or sent.",
+   "act": [
+    [
+     "move",
+     "n"
+    ]
+   ]
+  },
+  {
+   "say": "Change the people going and the price each updates.",
+   "act": [
+    [
+     "pick",
+     "n",
+     "5"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-trip.licence.json"
+}

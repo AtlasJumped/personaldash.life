@@ -1,0 +1,80 @@
+{
+ "schema": "hmr-card/1",
+ "id": "report",
+ "title": "Send the weekly recruiting recap",
+ "intro": "We will open the Work tab, add a line to the recap by voice, and send it to the team chat.",
+ "frame": "16:9",
+ "screen": "dashboard",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is a dashboard with made-up data. Nothing is sent. We start on the Work tab.",
+   "act": [
+    [
+     "click",
+     "tab:work"
+    ]
+   ]
+  },
+  {
+   "say": "The numbers come from your connected systems, and the recap is already written.",
+   "act": [
+    [
+     "move",
+     "work.draft"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "say": "Add a line by voice. Turn on the microphone and talk.",
+   "act": [
+    [
+     "click",
+     "work.mic"
+    ],
+    [
+     "wait",
+     1800
+    ],
+    [
+     "type",
+     "work.draft",
+     "Please add your interview availability by Friday."
+    ]
+   ]
+  },
+  {
+   "say": "Your words join the message. Now press Send to team chat.",
+   "act": [
+    [
+     "click",
+     "work.send"
+    ],
+    [
+     "wait",
+     900
+    ]
+   ]
+  },
+  {
+   "say": "The demo says nothing was sent. In the real dashboard, the message goes out only when you press Send.",
+   "act": [
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "say": "That is the whole workflow. Press Replay to watch it again.",
+   "act": []
+  }
+ ],
+ "licence": "cards/report.licence.json"
+}

@@ -1,0 +1,235 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-cousins",
+ "title": "Message all cousins",
+ "intro": "We will pick the cousins, send one message, and watch each phone ping and reply.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Your assistant shows your cousins.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Who do you want to reach? Here are your cousins."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Cousin Dev"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Cousin Mina"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Cousin Theo"
+    ],
+    [
+     "type",
+     "chat.1.r3",
+     "Cousin Ana"
+    ]
+   ]
+  },
+  {
+   "say": "You pick all four.",
+   "act": [
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "click",
+     "chat.1.r1"
+    ],
+    [
+     "click",
+     "chat.1.r2"
+    ],
+    [
+     "click",
+     "chat.1.r3"
+    ]
+   ]
+  },
+  {
+   "say": "You say what you want to tell them, and it drafts the message.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Tell them I am thinking of them, and ask for a video call this weekend."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.2.u"
+    ],
+    [
+     "type",
+     "chat.2.u",
+     "Tell them I am thinking of them, and ask for a video call this weekend."
+    ],
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.3.a"
+    ],
+    [
+     "type",
+     "chat.3.a",
+     "Draft: \"Hi everyone, I was thinking of you. Want to do a video call this weekend?\""
+    ]
+   ]
+  },
+  {
+   "say": "You send one message, and every phone pings.",
+   "act": [
+    [
+     "show",
+     "chat.4.tap"
+    ],
+    [
+     "type",
+     "chat.4.tap",
+     "Send to all"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.4.tap"
+    ],
+    [
+     "show",
+     "chat.5.ph"
+    ],
+    [
+     "type",
+     "chat.5.p0",
+     "Dev"
+    ],
+    [
+     "type",
+     "chat.5.p1",
+     "Mina"
+    ],
+    [
+     "type",
+     "chat.5.p2",
+     "Theo"
+    ],
+    [
+     "type",
+     "chat.5.p3",
+     "Ana"
+    ],
+    [
+     "type",
+     "chat.5.p0.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.5.p1.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.5.p2.msg",
+     "New message"
+    ],
+    [
+     "type",
+     "chat.5.p3.msg",
+     "New message"
+    ]
+   ]
+  },
+  {
+   "say": "Replies come in.",
+   "act": [
+    [
+     "type",
+     "chat.5.p0.rep",
+     "Yes! Saturday?"
+    ],
+    [
+     "type",
+     "chat.5.p1.rep",
+     "Count me in"
+    ],
+    [
+     "type",
+     "chat.5.p2.rep",
+     "Love this idea"
+    ],
+    [
+     "type",
+     "chat.5.p3.rep",
+     "I will bring snacks"
+    ]
+   ]
+  },
+  {
+   "say": "Four replies in under a minute.",
+   "act": [
+    [
+     "show",
+     "chat.6.note"
+    ],
+    [
+     "type",
+     "chat.6.note",
+     "Four replies in under a minute. You are a little closer to your family. Demo only."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-cousins.licence.json"
+}

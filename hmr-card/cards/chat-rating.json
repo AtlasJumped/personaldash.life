@@ -1,0 +1,364 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-rating",
+ "title": "Your setup rating",
+ "intro": "We will start your setup rating at 36 and say yes to each connection until it reaches 100.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. This is your setup rating, from 1 to 100.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "This is your setup rating, from 1 to 100. 100 means everything is connected. You are starting at 36."
+    ],
+    [
+     "show",
+     "chat.1.gauge"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "36"
+    ],
+    [
+     "show",
+     "chat.2.rows"
+    ],
+    [
+     "type",
+     "chat.2.r0",
+     "Email, every provider|unlocks reply workflows"
+    ],
+    [
+     "type",
+     "chat.2.r1",
+     "Calendars|agenda and trip planning"
+    ],
+    [
+     "type",
+     "chat.2.r2",
+     "Team chat|one-button reports"
+    ],
+    [
+     "type",
+     "chat.2.r3",
+     "Notes and files|your voice journal"
+    ],
+    [
+     "type",
+     "chat.2.r4",
+     "Read-only money view|subscription review"
+    ],
+    [
+     "type",
+     "chat.2.r5",
+     "Streaming questions|the new-only TV screen"
+    ],
+    [
+     "type",
+     "chat.2.r6",
+     "Music|discovery"
+    ],
+    [
+     "type",
+     "chat.2.r7",
+     "Smart home hub|lights and thermostat"
+    ]
+   ]
+  },
+  {
+   "say": "Say yes to email, and the rating rises.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to email."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.3.u"
+    ],
+    [
+     "type",
+     "chat.3.u",
+     "Yes to email."
+    ],
+    [
+     "click",
+     "chat.2.r0"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "50"
+    ]
+   ]
+  },
+  {
+   "say": "Calendars next.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to calendars."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.4.u"
+    ],
+    [
+     "type",
+     "chat.4.u",
+     "Yes to calendars."
+    ],
+    [
+     "click",
+     "chat.2.r1"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "62"
+    ]
+   ]
+  },
+  {
+   "say": "Then team chat.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to team chat."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.5.u"
+    ],
+    [
+     "type",
+     "chat.5.u",
+     "Yes to team chat."
+    ],
+    [
+     "click",
+     "chat.2.r2"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "70"
+    ]
+   ]
+  },
+  {
+   "say": "Notes and files.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to notes and files."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.6.u"
+    ],
+    [
+     "type",
+     "chat.6.u",
+     "Yes to notes and files."
+    ],
+    [
+     "click",
+     "chat.2.r3"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "78"
+    ]
+   ]
+  },
+  {
+   "say": "The money view.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to the money view."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.7.u"
+    ],
+    [
+     "type",
+     "chat.7.u",
+     "Yes to the money view."
+    ],
+    [
+     "click",
+     "chat.2.r4"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "86"
+    ]
+   ]
+  },
+  {
+   "say": "The streaming questions.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to the streaming questions."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.8.u"
+    ],
+    [
+     "type",
+     "chat.8.u",
+     "Yes to the streaming questions."
+    ],
+    [
+     "click",
+     "chat.2.r5"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "92"
+    ]
+   ]
+  },
+  {
+   "say": "Music.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to music."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.9.u"
+    ],
+    [
+     "type",
+     "chat.9.u",
+     "Yes to music."
+    ],
+    [
+     "click",
+     "chat.2.r6"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "96"
+    ]
+   ]
+  },
+  {
+   "say": "Last, the smart home hub.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Yes to the smart home hub."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.10.u"
+    ],
+    [
+     "type",
+     "chat.10.u",
+     "Yes to the smart home hub."
+    ],
+    [
+     "click",
+     "chat.2.r7"
+    ],
+    [
+     "pick",
+     "chat.1.gauge",
+     "100"
+    ]
+   ]
+  },
+  {
+   "say": "You can say no to any of these.",
+   "act": [
+    [
+     "show",
+     "chat.11.note"
+    ],
+    [
+     "type",
+     "chat.11.note",
+     "100. Everything is connected. You can say no to any of these. Example numbers."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-rating.licence.json"
+}

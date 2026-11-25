@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="A still picture of the demo dashboard, with made-up data">
+<style>
+.bg{fill:#f2f2f2}.card{fill:#fff;stroke:#8f8f8f}.t{fill:#111;font:600 26px system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.s{fill:#454545;font:400 18px system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.b{fill:#111;font:600 18px system-ui,-apple-system,Segoe UI,Roboto,sans-serif}.pill{fill:#fff;stroke:#8f8f8f}.on{fill:#b83c00}.ont{fill:#fff;font:600 16px system-ui,sans-serif}.pt{fill:#111;font:600 16px system-ui,sans-serif}.tag{fill:none;stroke:#b83c00}.tagt{fill:#b83c00;font:600 14px system-ui,sans-serif}.ln{stroke:#c8c8c8}.btn{fill:none;stroke:#b83c00}
+@media (prefers-color-scheme:dark){.bg{fill:#1c1c1c}.card{fill:#0a0a0a;stroke:#3a3a3a}.t,.b,.pt{fill:#f5f5f5}.s{fill:#c8c8c8}.pill{fill:#0a0a0a;stroke:#3a3a3a}.on{fill:#ff6a1a}.ont{fill:#0a0a0a}.tag,.btn{stroke:#ff6a1a}.tagt{fill:#ff6a1a}.ln{stroke:#3a3a3a}}
+</style>
+<rect class="bg" width="960" height="540"/>
+<rect class="card" x="32" y="28" width="896" height="484" rx="14"/>
+<text class="t" x="64" y="80">My dashboard</text>
+<rect class="tag" x="244" y="58" width="112" height="30" rx="15"/><text class="tagt" x="300" y="78" text-anchor="middle">Demo data</text>
+<text class="s" x="896" y="80" text-anchor="end">Made-up data. Nothing is sent.</text>
+<g>
+<rect class="on" x="64" y="106" width="96" height="40" rx="20"/><text class="ont" x="112" y="132" text-anchor="middle">Today</text>
+<rect class="pill" x="172" y="106" width="96" height="40" rx="20"/><text class="pt" x="220" y="132" text-anchor="middle">Inbox</text>
+<rect class="pill" x="280" y="106" width="96" height="40" rx="20"/><text class="pt" x="328" y="132" text-anchor="middle">Work</text>
+<rect class="pill" x="388" y="106" width="110" height="40" rx="20"/><text class="pt" x="443" y="132" text-anchor="middle">Agenda</text>
+<rect class="pill" x="510" y="106" width="170" height="40" rx="20"/><text class="pt" x="595" y="132" text-anchor="middle">My AI Journey</text>
+<rect class="pill" x="692" y="106" width="104" height="40" rx="20"/><text class="pt" x="744" y="132" text-anchor="middle">Closer</text>
+</g>
+<text class="b" x="64" y="200">Today: your top three</text>
+<line class="ln" x1="64" y1="222" x2="896" y2="222"/>
+<text class="b" x="64" y="262">Reply to Mom about the holidays</text><text class="s" x="64" y="288">Waiting since Monday</text>
+<rect class="btn" x="740" y="246" width="156" height="40" rx="8"/><text class="tagt" x="818" y="272" text-anchor="middle">Open inbox</text>
+<line class="ln" x1="64" y1="312" x2="896" y2="312"/>
+<text class="b" x="64" y="352">Send the weekly recruiting recap</text><text class="s" x="64" y="378">Due today</text>
+<rect class="btn" x="740" y="336" width="156" height="40" rx="8"/><text class="tagt" x="818" y="362" text-anchor="middle">Open work</text>
+<line class="ln" x1="64" y1="402" x2="896" y2="402"/>
+<text class="b" x="64" y="442">Pick a week for the trip</text><text class="s" x="64" y="468">Friends are free in week 3</text>
+<rect class="btn" x="740" y="426" width="156" height="40" rx="8"/><text class="tagt" x="818" y="452" text-anchor="middle">Open agenda</text>
+</svg>

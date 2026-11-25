@@ -1,0 +1,138 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-gains",
+ "title": "Gains",
+ "intro": "We will switch on quiet tracking for air quality, sleep, and meals, and record a voice journal.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Your assistant tells you what it tracks, privately.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Here is what I track for you, quietly, and keep private by default."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Air quality|example: good"
+    ],
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Sleep|example: steady"
+    ],
+    [
+     "click",
+     "chat.1.r1"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Meals|example: logged"
+    ],
+    [
+     "click",
+     "chat.1.r2"
+    ],
+    [
+     "type",
+     "chat.1.r3",
+     "Reading plan|your own plan"
+    ],
+    [
+     "click",
+     "chat.1.r3"
+    ]
+   ]
+  },
+  {
+   "say": "In the evening it offers a voice journal.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.2.a"
+    ],
+    [
+     "type",
+     "chat.2.a",
+     "It is evening. Want to record your voice journal?"
+    ]
+   ]
+  },
+  {
+   "say": "You press record. It is kept private.",
+   "act": [
+    [
+     "show",
+     "chat.3.tap"
+    ],
+    [
+     "type",
+     "chat.3.tap",
+     "Record"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.3.tap"
+    ],
+    [
+     "show",
+     "chat.4.note"
+    ],
+    [
+     "type",
+     "chat.4.note",
+     "Saved, private by default (demo)."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-gains.licence.json"
+}

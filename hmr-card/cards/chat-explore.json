@@ -1,0 +1,129 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-explore",
+ "title": "Explore places",
+ "intro": "We will find a week when three calendars are free and start a group chat for a trip.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. Your assistant spots three calendars that line up.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Your budget looks good, work is slower this time of year, and two friends in your close circle are free the same week."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "You|free week 3"
+    ],
+    [
+     "click",
+     "chat.1.r0"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Friend A|free week 3"
+    ],
+    [
+     "click",
+     "chat.1.r1"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Friend B|free week 3"
+    ],
+    [
+     "click",
+     "chat.1.r2"
+    ]
+   ]
+  },
+  {
+   "say": "It offers to start a group chat.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.2.a"
+    ],
+    [
+     "type",
+     "chat.2.a",
+     "Want me to start a group chat with a draft message?"
+    ]
+   ]
+  },
+  {
+   "say": "You say yes.",
+   "act": [
+    [
+     "show",
+     "chat.3.tap"
+    ],
+    [
+     "type",
+     "chat.3.tap",
+     "Yes"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.3.tap"
+    ],
+    [
+     "show",
+     "chat.4.note"
+    ],
+    [
+     "type",
+     "chat.4.note",
+     "Group chat started (demo)."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-explore.licence.json"
+}

@@ -1,0 +1,42 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-social",
+ "title": "Your circles and who sees what",
+ "intro": "Try made-up privacy switches and see who needs permission to message you.",
+ "frame": "4:5",
+ "screen": "app-social",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up data. Nothing is saved or sent. Turn on About me and Photos.",
+   "act": [
+    [
+     "click",
+     "sw0"
+    ],
+    [
+     "click",
+     "sw3"
+    ]
+   ]
+  },
+  {
+   "say": "Someone outside your circles has to ask first.",
+   "act": [
+    [
+     "pick",
+     "who",
+     "3"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-social.licence.json"
+}

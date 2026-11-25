@@ -1,12 +1,10 @@
 # personaldash.life
 
-The free personal AI dashboard: what it is and how to start. The file and its history live at https://claudebomb.com and https://github.com/AtlasJumped/claudebomb.com. The download is https://claudebomb.com/dashboard/claudebomb-dashboard.md.
+The free personal dashboard: copy one piece of plain text, paste it into your AI assistant, and it audits your setup, sets things up, and builds one calm page for your day.
 
-Static site: `index.html`, `css/style.css`, `js/app.js`, `js/hmr-dock.js`, `favicon.svg`. No build step, no external fonts or CDNs.
+This is the claudebomb dashboard page as it stood on Nov 25, 2026, moved here in the Citrus design (claudebomb.com commit b558849, Nov 23). claudebomb.com is now the open prompt bank, and this dashboard is its flagship prompt.
 
+- Copy text: `setup/claude-setup-guide.md` plus `dashboard/claudebomb-dashboard.md`.
+- `hmr-dock.js` and `hmr-dash.js`: the shared HMR button (Speak, React, Funsies, feedback).
+- Static site, no build step. `CNAME` is `personaldash.life`.
 - Part of the HMR family of websites: https://hmrfamily.life
-- Design picker (bottom left): three looks and a four-level rating, stored in the browser's localStorage. `?design=1` to `?design=3` picks a look.
-- `js/hmr-dock.js` is the shared bottom dock (Design, Funsies, React). It is copied from hmrfamily.life and replaced when that file is upgraded.
-- Deploy: any static host. `CNAME` is set to `personaldash.life`.
-- Content comes only from pages that already exist on https://universemodel.ai and https://claudebomb.com. Claims are labeled as established science, HMR's view, or open.
-- Join us on Discord: https://discord.gg/gEnC8TpNc

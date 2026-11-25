@@ -1,0 +1,41 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-tv",
+ "title": "Watch something new",
+ "intro": "A made-up list of new movies and shows, with recaps for what is still airing.",
+ "frame": "4:5",
+ "screen": "app-tv",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "These titles are made up. Nothing is played or sent.",
+   "act": [
+    [
+     "move",
+     "pick"
+    ]
+   ]
+  },
+  {
+   "say": "Press Pick for me, then open a recap.",
+   "act": [
+    [
+     "click",
+     "pick"
+    ],
+    [
+     "click",
+     "rc0"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-tv.licence.json"
+}

@@ -1,0 +1,37 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-family",
+ "title": "The people who matter",
+ "intro": "Pick made-up cousins and write to them all at once.",
+ "frame": "4:5",
+ "screen": "app-family",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up family. Nothing is sent. Uncheck one cousin.",
+   "act": [
+    [
+     "click",
+     "f2"
+    ]
+   ]
+  },
+  {
+   "say": "Next you would press Message all selected cousins.",
+   "act": [
+    [
+     "move",
+     "go"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-family.licence.json"
+}

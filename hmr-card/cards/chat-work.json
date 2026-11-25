@@ -1,0 +1,135 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-work",
+ "title": "Get more done at work",
+ "intro": "We will turn live numbers into a weekly recap, make it warmer, and send it to the team.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. On Friday your assistant writes a recap from your numbers.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "Friday. Here is the weekly recap, written from your numbers."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "Open roles|12"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "Interviews held|31"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "Offers out|4"
+    ]
+   ]
+  },
+  {
+   "say": "You ask for a warmer tone, and it edits.",
+   "act": [
+    [
+     "type",
+     "chat.input",
+     "Make it a little warmer, then send it."
+    ],
+    [
+     "click",
+     "chat.send"
+    ],
+    [
+     "show",
+     "chat.2.u"
+    ],
+    [
+     "type",
+     "chat.2.u",
+     "Make it a little warmer, then send it."
+    ],
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.3.a"
+    ],
+    [
+     "type",
+     "chat.3.a",
+     "Done. Edited, and ready."
+    ]
+   ]
+  },
+  {
+   "say": "You send it to the team chat without leaving the screen.",
+   "act": [
+    [
+     "show",
+     "chat.4.tap"
+    ],
+    [
+     "type",
+     "chat.4.tap",
+     "Send to team chat"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.4.tap"
+    ],
+    [
+     "show",
+     "chat.5.note"
+    ],
+    [
+     "type",
+     "chat.5.note",
+     "Sent (demo). You never left the screen."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-work.licence.json"
+}

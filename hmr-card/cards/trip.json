@@ -1,0 +1,92 @@
+{
+ "schema": "hmr-card/1",
+ "id": "trip",
+ "title": "Plan a trip with friends",
+ "intro": "We will find the week when three calendars line up and start a group chat to plan the trip.",
+ "frame": "16:9",
+ "screen": "dashboard",
+ "cast": [
+  "friend-a",
+  "friend-b"
+ ],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is a dashboard with made-up data. Nothing is sent. We open the Agenda tab.",
+   "act": [
+    [
+     "click",
+     "tab:agenda"
+    ]
+   ]
+  },
+  {
+   "say": "Your calendar and two friends' calendars all show the same free week: week 3.",
+   "act": [
+    [
+     "move",
+     "agenda.cal"
+    ],
+    [
+     "wait",
+     700
+    ]
+   ]
+  },
+  {
+   "say": "Press Suggest a trip.",
+   "act": [
+    [
+     "click",
+     "agenda.trip"
+    ]
+   ]
+  },
+  {
+   "say": "A group message is already written. Add a line by voice.",
+   "act": [
+    [
+     "click",
+     "agenda.mic"
+    ],
+    [
+     "wait",
+     1800
+    ],
+    [
+     "type",
+     "agenda.draft",
+     "I can drive if we pick somewhere close."
+    ]
+   ]
+  },
+  {
+   "say": "Now start the group chat.",
+   "act": [
+    [
+     "click",
+     "agenda.send"
+    ],
+    [
+     "wait",
+     900
+    ]
+   ]
+  },
+  {
+   "say": "The demo says no group chat was started. In the real dashboard, nothing happens until you press the button.",
+   "act": [
+    [
+     "wait",
+     400
+    ]
+   ]
+  },
+  {
+   "say": "That is the whole workflow. Press Replay to watch it again.",
+   "act": []
+  }
+ ],
+ "licence": "cards/trip.licence.json"
+}

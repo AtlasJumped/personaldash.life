@@ -1,0 +1,50 @@
+{
+ "schema": "hmr-card/1",
+ "id": "app-report",
+ "title": "Weekly recruiting recap",
+ "intro": "A made-up weekly recap, drafted for you to edit.",
+ "frame": "4:5",
+ "screen": "app-report",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "The numbers and message are made up. Nothing is sent.",
+   "act": [
+    [
+     "move",
+     "metrics"
+    ]
+   ]
+  },
+  {
+   "say": "Add a line by voice, then press Send.",
+   "act": [
+    [
+     "click",
+     "mic"
+    ],
+    [
+     "wait",
+     1800
+    ],
+    [
+     "type",
+     "draft",
+     "Also, interview availability is tight on Thursday."
+    ],
+    [
+     "click",
+     "send"
+    ]
+   ]
+  },
+  {
+   "say": "Your turn. Click around and try it yourself.",
+   "act": [],
+   "free": true
+  }
+ ],
+ "licence": "cards/app-report.licence.json"
+}

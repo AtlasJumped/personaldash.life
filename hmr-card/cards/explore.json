@@ -1,0 +1,91 @@
+{
+ "schema": "hmr-card/1",
+ "id": "explore",
+ "title": "Explore the demo dashboard",
+ "intro": "A short tour of the seven tabs of a dashboard with made-up data. At the end, you can click around yourself.",
+ "frame": "16:9",
+ "screen": "dashboard",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This is a dashboard with made-up data. Nothing is sent. Today lists your top three things.",
+   "act": [
+    [
+     "move",
+     "today.list"
+    ],
+    [
+     "wait",
+     600
+    ]
+   ]
+  },
+  {
+   "say": "The Inbox lists the emails that need a reply.",
+   "act": [
+    [
+     "click",
+     "tab:inbox"
+    ]
+   ]
+  },
+  {
+   "say": "Work shows the numbers for a weekly recap.",
+   "act": [
+    [
+     "click",
+     "tab:work"
+    ]
+   ]
+  },
+  {
+   "say": "Agenda shows the week when calendars line up.",
+   "act": [
+    [
+     "click",
+     "tab:agenda"
+    ]
+   ]
+  },
+  {
+   "say": "My AI Journey shows your accounts and habits.",
+   "act": [
+    [
+     "click",
+     "tab:journey"
+    ]
+   ]
+  },
+  {
+   "say": "Bringing humans closer helps you read a message from someone you love.",
+   "act": [
+    [
+     "click",
+     "tab:closer"
+    ]
+   ]
+  },
+  {
+   "say": "Integrations and partnerships shows what feeds your dashboard, and what you could connect next.",
+   "act": [
+    [
+     "click",
+     "tab:integrations"
+    ]
+   ]
+  },
+  {
+   "say": "Now it is your turn. This is a click-around mock with made-up data. Press Send anywhere and it only shows a note. Nothing leaves this page.",
+   "act": [
+    [
+     "click",
+     "tab:today"
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/explore.licence.json"
+}

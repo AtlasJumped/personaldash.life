@@ -1,0 +1,117 @@
+{
+ "schema": "hmr-card/1",
+ "id": "chat-fun",
+ "title": "Have fun",
+ "intro": "We will turn on the TV and see only new things, with no menu to scroll through.",
+ "frame": "4:5",
+ "screen": "chat",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "This chat is made up, and nothing is sent. You turn on the TV and there is no menu.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.0.a"
+    ],
+    [
+     "type",
+     "chat.0.a",
+     "You turned on the TV. No menu. Movies on the left, shows on the right, all new to you."
+    ],
+    [
+     "show",
+     "chat.1.rows"
+    ],
+    [
+     "type",
+     "chat.1.r0",
+     "A quiet drama about a lighthouse keeper|movie"
+    ],
+    [
+     "type",
+     "chat.1.r1",
+     "A fantasy series, new this week|show"
+    ],
+    [
+     "type",
+     "chat.1.r2",
+     "A detective show set in the 1960s|show"
+    ]
+   ]
+  },
+  {
+   "say": "It also tells you about a film your friends loved.",
+   "act": [
+    [
+     "show",
+     "chat.typing"
+    ],
+    [
+     "wait",
+     700
+    ],
+    [
+     "hide",
+     "chat.typing"
+    ],
+    [
+     "show",
+     "chat.2.a"
+    ],
+    [
+     "type",
+     "chat.2.a",
+     "A heads-up: most of your friends have rated a film in their top ten, and you have never watched it."
+    ]
+   ]
+  },
+  {
+   "say": "When you cannot choose, it picks for you.",
+   "act": [
+    [
+     "show",
+     "chat.3.tap"
+    ],
+    [
+     "type",
+     "chat.3.tap",
+     "Pick one at random"
+    ],
+    [
+     "wait",
+     500
+    ],
+    [
+     "click",
+     "chat.3.tap"
+    ],
+    [
+     "show",
+     "chat.4.note"
+    ],
+    [
+     "type",
+     "chat.4.note",
+     "Tonight: A road-trip comedy. Generic titles on purpose."
+    ]
+   ],
+   "free": true
+  }
+ ],
+ "licence": "cards/chat-fun.licence.json"
+}
