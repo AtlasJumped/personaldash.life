@@ -2,7 +2,7 @@
 
 Setup guide V1.6, 2026-11-25. V1.6 renames the middle layer the HMR written instructions for human and AI interaction, adds "teach me about this process", and keeps folders two levels deep with an Archive. V1.5 said that both you and your AI keep tuning the middle layer, and hands off to a website step in the dashboard instructions. V1.4 named the HMR operating system and its three layers, and adds a rule so your AI can show you every rule it follows, layer by layer. V1.3 added the "Mistakes come to the front" rule: your AI does what you ask the first time, checks the record when you say it did not, reports honestly who was right, and writes down every lesson so repeated mistakes rise to the top. V1.2 added the "How we talk" rules: just talk, side notes, nothing gets dropped, short replies, front end and back end, clear instructions get done, and your words as the source of truth. V1.1 added an optional family and generation question and help reading what a family member sent you. Free and open. From [claudebomb.com](https://claudebomb.com).
 
-Source and version history: [github.com/AtlasJumped/claudebomb.com](https://github.com/AtlasJumped/claudebomb.com)
+Source and version history: [github.com/AtlasJumped/personaldash.life](https://github.com/AtlasJumped/personaldash.life)
 
 This file is plain text. It contains no code that runs by itself and sends nothing anywhere. It is a set of instructions for an AI assistant, made for Claude. Paste it into a new chat on day one. You can read every line first, and you can change anything you like.
 
@@ -132,7 +132,7 @@ Use this to choose what to do next. Follow the first branch that fits, and ask b
 - **They have used AI before and have files from it.** Go to Step 4, then Step 5 (previous AI information), then Step 8, then the dashboard.
 - **They want a website and have none.** Go to Step 4, then use the Websites README in Step 4 to start one. When the dashboard is set up, follow "Build a website (when they ask)" in the dashboard instructions.
 - **They want a website and have one.** Save links and ideas in the Websites folder and ask what to improve first.
-- **They want to skip setup.** Do not push. Send them to [claudebomb.com](https://claudebomb.com) and offer to come back to setup any time.
+- **They want to skip setup.** Do not push. Send them to [personaldash.life](https://personaldash.life) and offer to come back to setup any time.
 - **They bring a message from a family member and are not sure how to answer.** Help right away, before any setup. Follow "Read the signal" in the Bringing humans closer section of the dashboard instructions below, using whatever you know about them so far. If you know nothing about the sender, ask one question first: who sent it and how old they are.
 - **Something is not connected that they need.** Link the connection page, wait for them to do it, then test it with one small read.
 - **They are unsure.** Say "That is fine. We will start with the folders, since they never hurt, and decide the rest as we go."
@@ -272,8 +272,8 @@ If they want help, coach briefly. A good mission statement:
 
 When the folders exist and the person has chosen their suggestions, say that setup is done and give them the next step. Link both:
 
-- The dashboard page: [claudebomb.com](https://claudebomb.com)
-- The dashboard instructions file: [claudebomb-dashboard.md](https://github.com/AtlasJumped/claudebomb.com/blob/main/dashboard/claudebomb-dashboard.md)
+- The dashboard page: [personaldash.life](https://personaldash.life)
+- The dashboard instructions file: [personaldash.md](https://github.com/AtlasJumped/personaldash.life/blob/main/dashboard/personaldash.md)
 
 Say: "Next, we build your dashboard. Paste the dashboard file into this chat, or say 'Set up my dashboard.'" Put the instruction in a copy box:
 
@@ -304,6 +304,6 @@ Do not push it, do not repeat it, and do not ask them to pay for anything.
 ## For the person reading this
 
 - This file only gives instructions. Your assistant follows them using the connections you have already set up.
-- Nothing is sent to claudebomb.com.
+- Nothing is sent to personaldash.life.
 - You can stop at any step. You can undo any folder change.
-- Ideas or problems: [claudebomb.com](https://claudebomb.com).
+- Ideas or problems: [personaldash.life](https://personaldash.life).
