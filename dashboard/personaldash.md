@@ -120,7 +120,7 @@ If an inbox is connected, do one deeper pass the first time, and show it on the 
 
 1. The link or file.
 2. Their rating and the one connector that would raise it the most.
-3. **Improve this dashboard.** Ask whether they are happy with it, and fix anything that is not right. Mention the Critique button for later. Do not send any other link yet. When they have told you they are happy, follow Step 10 of the setup guide: send the workdash.life link once, and only once. Send the link first, then ask: "What would you like to do now that your dashboard is set up?" Offer up to three suggestions, and make one of them building a website (see "Build a website (when they ask)" below).
+3. **Improve this dashboard.** Ask whether they are happy with it, and fix anything that is not right. Mention the Critique button for later. Do not send any other link yet. When they have told you they are happy, follow Step 10 of the setup guide: send its closing message once, and only once, word for word. Send it first, then ask: "What would you like to do now that your dashboard is set up?" Offer up to three suggestions, and make one of them building a website (see "Build a website (when they ask)" below).
 
 ---
 
