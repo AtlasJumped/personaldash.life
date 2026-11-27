@@ -333,7 +333,7 @@ $('#fbsend').addEventListener('click',function(){
   D.send(p).then(function(r){st.textContent=r&&r.ok?'Sent. Thank you so much. We read all of it.':'Your email app should have opened with your message. Your words are still here.'},function(){st.textContent='That did not go through. Please try again in a moment.'});
 });
 $('#noask').addEventListener('click',function(){set('noask','1');$('#valuecard').hidden=true;$('#trystat').textContent='We will not ask again on this device.'});
-$('#famfb').addEventListener('click',function(){set('noask',null);set('done','1');applyState();show('welcome');$('#fb').hidden=false;$('#valuecard').scrollIntoView({behavior:'smooth',block:'center'});$('#fbtext').focus()});
+$('#famfb').addEventListener('click',function(){show('welcome');$('#valuecard').hidden=false;$('#fb').hidden=false;$('#valuecard').scrollIntoView({behavior:'smooth',block:'center'});$('#fbtext').focus()});
 
 /* ---------- family: missions ---------- */
 var FAM=['Mom','Dad','Riley','Avery','Max'];
