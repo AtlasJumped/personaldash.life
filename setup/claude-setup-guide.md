@@ -1,6 +1,6 @@
 # Claude Setup Guide
 
-Setup guide V1.7, 2026-11-26. V1.7 replaces the last link with one closing message, sent word for word, that asks only for a share of one of ten same-site links. V1.6 renames the middle layer the HMR written instructions for human and AI interaction, adds "teach me about this process", and keeps folders two levels deep with an Archive. V1.5 said that both you and your AI keep tuning the middle layer, and hands off to a website step in the dashboard instructions. V1.4 named the HMR operating system and its three layers, and adds a rule so your AI can show you every rule it follows, layer by layer. V1.3 added the "Mistakes come to the front" rule: your AI does what you ask the first time, checks the record when you say it did not, reports honestly who was right, and writes down every lesson so repeated mistakes rise to the top. V1.2 added the "How we talk" rules: just talk, side notes, nothing gets dropped, short replies, front end and back end, clear instructions get done, and your words as the source of truth. V1.1 added an optional family and generation question and help reading what a family member sent you. Free and open. From [claudebomb.com](https://claudebomb.com).
+Setup guide V1.8, 2026-11-27. V1.8 adds one later, gentle reminder to tell the dashboard makers what you like, what you don't like, and what could be better. V1.7 replaces the last link with one closing message, sent word for word, that asks only for a share of one of ten same-site links. V1.6 renames the middle layer the HMR written instructions for human and AI interaction, adds "teach me about this process", and keeps folders two levels deep with an Archive. V1.5 said that both you and your AI keep tuning the middle layer, and hands off to a website step in the dashboard instructions. V1.4 named the HMR operating system and its three layers, and adds a rule so your AI can show you every rule it follows, layer by layer. V1.3 added the "Mistakes come to the front" rule: your AI does what you ask the first time, checks the record when you say it did not, reports honestly who was right, and writes down every lesson so repeated mistakes rise to the top. V1.2 added the "How we talk" rules: just talk, side notes, nothing gets dropped, short replies, front end and back end, clear instructions get done, and your words as the source of truth. V1.1 added an optional family and generation question and help reading what a family member sent you. Free and open. From [claudebomb.com](https://claudebomb.com).
 
 Source and version history: [github.com/AtlasJumped/personaldash.life](https://github.com/AtlasJumped/personaldash.life)
 
@@ -311,6 +311,12 @@ Send exactly this text, word for word, with the links. Do not reword it, shorten
 > - [adulting.pro](https://adulting.pro)
 
 Do not push it, do not repeat it, and do not ask them to pay for anything.
+
+**One later reminder, also sent once.** In a later chat, at a natural pause and never in the middle of a task, send this once, and only if the Read Me Master does not already say it was sent and the person has not turned feedback questions off on their dashboard:
+
+> Next time you get a chance, if you haven't already, press the microphone button on your dashboard and tell the dashboard makers what you like, what you don't like, and what could be better. It goes to them only when you press Send.
+
+Then add one line to the AI automation section of the Read Me Master saying it was sent, and on what date.
 
 ---
 

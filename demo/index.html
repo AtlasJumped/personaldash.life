@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard demo | personaldash.life</title>
+<meta name="description" content="A demo of your free personal dashboard: the Welcome tab where you try your first change by voice, and a Family dashboard with a made-up example family.">
+<meta property="og:title" content="Dashboard demo | personaldash.life">
+<meta property="og:description" content="Try your first change by voice, then see a family dashboard with a made-up example family. Free, no ads, nothing to buy.">
+<meta property="og:image" content="https://personaldash.life/og.png">
+<meta name="theme-color" content="#fff6e0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='12' height='15' rx='3' fill='%23151515'/%3E%3Crect x='17' y='3' width='12' height='9' rx='3' fill='%23ff5a36'/%3E%3Crect x='3' y='20' width='12' height='9' rx='3' fill='%23ff5a36'/%3E%3Crect x='17' y='14' width='12' height='15' rx='3' fill='%23151515'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#fff6e0;--fg:#151515;--mut:#4a463d;--card:#fff;--line:#151515;--acc:#ff5a36;--yel:#ffd23f;--ok:#1f7a4d;--soft:#fffaf0;--r:1.25rem;--font:ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.55 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.pd-serif{--font:Georgia,"Iowan Old Style","Palatino Linotype",serif}
+body.pd-round{--font:"Trebuchet MS","Avenir Next",Verdana,sans-serif}
+a{color:inherit}
+h1,h2,h3{margin:0;line-height:1.15;letter-spacing:-.02em}
+h1{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:900}
+h2{font-size:clamp(1.3rem,4vw,1.8rem);font-weight:850}
+h3{font-size:1.1rem;font-weight:800}
+p{margin:0 0 .8rem}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.own{font-size:.8rem;text-align:center;padding:.35rem 1rem;background:var(--fg);color:#fff}
+.own a{color:var(--yel)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem clamp(1rem,4vw,2rem);border-bottom:2px solid var(--line);background:#fff}
+.logo{font-weight:900;text-decoration:none;font-size:1.1rem}.logo b{color:var(--acc)}
+.wrap{max-width:62rem;margin:0 auto;padding:1rem clamp(1rem,4vw,2rem) 7rem}
+.note{font-size:.9rem;color:var(--mut);border:1px dashed var(--line);border-radius:.8rem;padding:.6rem .9rem;margin:.6rem 0 1rem;background:var(--soft)}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1.2rem}
+.tab{border:2px solid var(--line);background:#fff;border-radius:99px;padding:.45rem 1rem;font-weight:700;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--fg);color:var(--yel)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.75rem;padding:.4rem 1.2rem;border-radius:99px;border:2px solid var(--fg);background:var(--fg);color:var(--yel);font-weight:700;cursor:pointer;text-decoration:none}
+.btn.ghost{background:#fff;color:var(--fg)}
+.btn.small{min-height:2.3rem;padding:.25rem .9rem;font-size:.9rem}
+.linkbtn{background:none;border:0;padding:.2rem 0;text-decoration:underline;cursor:pointer;color:var(--mut);font-size:.9rem}
+.card{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:1.1rem 1.2rem;margin:0 0 1rem}
+.intro{background:var(--yel);border:2px solid var(--line);border-radius:var(--r);padding:.8rem 1rem;margin:0 0 1rem;display:flex;gap:.8rem;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.intro p{margin:0;flex:1 1 16rem}
+.great{background:var(--ok);color:#fff;border-color:var(--ok)}
+.great h2{color:#fff}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.try{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));margin:.6rem 0 1rem}
+.try .btn{width:100%;min-height:3.2rem}
+.mic{width:2.9rem;height:2.9rem;border-radius:50%;border:2px solid var(--fg);background:conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#007aff,#5856d6,#af52de,#ff3b30);display:inline-grid;place-items:center;cursor:pointer;flex:none}
+.mic svg{width:1.3rem;height:1.3rem;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round}
+.mic span{background:var(--fg);border-radius:50%;width:2.1rem;height:2.1rem;display:grid;place-items:center}
+.mic.on{background:#e00}.mic.on span{background:#e00}
+.live{min-height:1.6rem;font-size:.95rem}
+.live b{color:#e00}
+.times{margin:.2rem 0 0;padding-left:1.2rem}
+.times li{margin:.25rem 0}
+textarea,input[type=email],input[type=text],select{width:100%;border:2px solid var(--line);border-radius:.8rem;padding:.6rem .7rem;background:var(--soft)}
+textarea{min-height:6rem;resize:vertical}
+label{font-weight:700;font-size:.92rem;display:block;margin:.4rem 0 .25rem}
+.fbbox{display:flex;gap:.5rem;align-items:flex-start}
+.fbbox textarea{flex:1}
+.status{font-size:.92rem;color:var(--mut);min-height:1.2rem;margin:.4rem 0 0}
+.grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))}
+.who{font-weight:800}.who small{font-weight:500;color:var(--mut)}
+.mis textarea{min-height:4.5rem;font-size:.95rem}
+.badge{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:1.5px solid var(--line);border-radius:99px;padding:.15rem .55rem;background:#fff;vertical-align:middle}
+.badge.plan{background:var(--soft);border-style:dashed}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border-bottom:1px solid #d8d0bd;padding:.45rem .4rem;text-align:left;vertical-align:top}
+th{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.tblw{overflow-x:auto}
+.sw{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;font-weight:700;font-size:.92rem}
+.sw input{width:1.2rem;height:1.2rem;accent-color:var(--acc)}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.35rem}
+.day{border:1.5px solid var(--line);border-radius:.7rem;padding:.35rem;background:var(--soft);min-height:7.5rem}
+.day h4{margin:0 0 .3rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.ev{font-size:.78rem;line-height:1.25;border-radius:.45rem;padding:.25rem .35rem;margin:0 0 .25rem;border-left:5px solid}
+.p0{background:#ffe3dc;border-color:#ff5a36}.p1{background:#dceaff;border-color:#2f6fe0}.p2{background:#e2f5e6;border-color:#1f9d55}.p3{background:#f3e3ff;border-color:#8a3ffc}.p4{background:#fff1c2;border-color:#c99400}.pall{background:#eee;border-color:#151515}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem .9rem;font-size:.85rem;margin:.5rem 0 0}
+.legend i{display:inline-block;width:.8rem;height:.8rem;border-radius:3px;margin-right:.3rem;vertical-align:-1px;border:1px solid var(--line)}
+@media (max-width:640px){.cal{grid-template-columns:1fr}.day{min-height:0}}
+.trait{border-top:1px solid #d8d0bd;padding:.8rem 0}
+.trait:first-of-type{border-top:0}
+.trait-h{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;align-items:baseline}
+.bell{position:relative;margin:.4rem 0 .2rem;height:4.2rem}
+.bell svg{position:absolute;inset:0;width:100%;height:100%}
+.bell svg path{fill:#ffe9a8;stroke:var(--fg);stroke-width:1.5}
+.track{position:absolute;left:0;right:0;bottom:.15rem;height:.5rem;background:var(--fg);border-radius:99px;opacity:.15}
+.zones{position:absolute;inset:0;display:grid;grid-template-columns:repeat(5,1fr)}
+.zone{border:0;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:center;padding:0 0 0;position:relative}
+.zone span{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;border:2px solid var(--fg);background:#fff;font-weight:800;font-size:.9rem;margin-bottom:-.3rem}
+.zone[aria-checked="true"] span{background:var(--acc);color:#fff;transform:scale(1.18)}
+.zone:hover span{background:var(--yel)}
+.zone[aria-checked="true"]:hover span{background:var(--acc)}
+.scale-l{display:flex;justify-content:space-between;font-size:.78rem;color:var(--mut);margin-top:.5rem}
+.trait.off .bell,.trait.off .scale-l{opacity:.3;filter:grayscale(1);pointer-events:none}
+.skip{font-size:.85rem}
+.trait.off .skip{background:var(--fg);color:var(--yel)}
+.warn{background:#fff1c2;border:2px solid #c99400;border-radius:.8rem;padding:.5rem .8rem;font-size:.92rem;margin:.5rem 0}
+.sum li{margin:.2rem 0}
+.disc{font-size:.88rem;color:var(--mut)}
+[hidden]{display:none!important}
+.addedtab{min-height:12rem}
+.foot{margin-top:2rem;font-size:.9rem;color:var(--mut)}
+@media (prefers-reduced-motion:no-preference){.pop{animation:pop .35s ease both}@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}}
+</style>
+</head>
+<body>
+<div class="own">This website is owned by the person who owns this website. <a href="https://elevat.ing">elevat.ing</a></div>
+<header class="top"><a class="logo" href="/">personal<b>dash</b> <span class="badge">Demo</span></a><a class="btn small ghost" href="/">Back to personaldash.life</a></header>
+
+<main class="wrap">
+<p class="note"><b>Demo only.</b> This is what your own dashboard can look like. The family here is made up. Nothing you do on this page leaves your browser, except feedback you choose to send.</p>
+
+<div class="tabs" role="tablist" aria-label="Dashboard tabs" id="tabs">
+<button type="button" class="tab" role="tab" id="t-welcome" aria-controls="welcome" aria-selected="true">Welcome</button>
+<button type="button" class="tab" role="tab" id="t-family" aria-controls="family" aria-selected="false">Family</button>
+</div>
+
+<!-- ============ WELCOME ============ -->
+<section id="welcome" role="tabpanel" aria-labelledby="t-welcome">
+<div class="intro" data-intro="welcome"><p><b>Welcome.</b> This tab shows you how to change your dashboard just by talking.</p><button type="button" class="btn small ghost" data-hide>Don't show this again</button></div>
+
+<div class="card great pop" id="great" hidden>
+<h2>Great job! You're in total control.</h2>
+<p style="margin:.5rem 0 0">Look, just click around and do whatever you want now. If you need anything else, go back to the site you got this from.</p>
+</div>
+
+<div class="card">
+<h1>Welcome to your dashboard</h1>
+<p style="margin-top:.7rem">If you're seeing this, somebody gave you a link to a website, and pretty quickly you got to this screen. You now really are controlling artificial intelligence. The chat you have can change this dashboard just by you talking to it and asking.</p>
+<p><b>Every page has a microphone button at the bottom right of your screen.</b> All you have to do is press it and talk.</p>
+</div>
+
+<div class="card" id="trycard">
+<h2>Try one simple change</h2>
+<p style="margin-top:.5rem">This is so easy that you can pick anything you want. Why don't you try one of these three?</p>
+<div class="try">
+<button type="button" class="btn" data-try="color">Change the color</button>
+<button type="button" class="btn" data-try="font">Change the font</button>
+<button type="button" class="btn" data-try="tab">Add a new tab about something I care about</button>
+</div>
+<p>Or press the microphone and say it, for example "make it green", "change the font", or "add a tab about gardening".</p>
+<div class="row"><button type="button" class="mic" id="trymic" aria-label="Microphone: say the change you want" aria-pressed="false"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></span></button><div class="live" id="trylive" aria-live="polite">Press the microphone and start talking.</div></div>
+<div id="tabask" hidden style="margin-top:.8rem"><label for="tabtopic">What is the new tab about?</label><div class="row"><input type="text" id="tabtopic" placeholder="for example: gardening" style="flex:1 1 12rem"><button type="button" class="btn small" id="tabgo">Add the tab</button></div></div>
+<p class="status" id="trystat" role="status"></p>
+<h3 style="margin-top:1rem">How long things take</h3>
+<ul class="times">
+<li>Simple changes like these usually take <b>less than a minute</b>.</li>
+<li>Bigger jobs on your first day, like your first setup, can take <b>several minutes</b>.</li>
+<li>In many cases, AI finishes complex tasks in less than a minute.</li>
+</ul>
+<p class="disc" style="margin-top:.6rem">In your real dashboard, your AI makes the change. In this demo, the page makes it for you.</p>
+</div>
+
+<div class="card pop" id="valuecard" hidden>
+<h2>Did we provide you any value?</h2>
+<div class="row" style="margin:.7rem 0"><button type="button" class="btn" data-val="Yes">Yes</button><button type="button" class="btn ghost" data-val="No">No</button></div>
+<div id="fb" hidden>
+<p>We'd love to hear more. Let's make this better for everybody else. <b>What do you like? What do you not like? And what could be better?</b> About two minutes. Anything that comes to mind is fine.</p>
+<label for="fbtext">Your feedback</label>
+<div class="fbbox"><textarea id="fbtext" placeholder="Press the microphone and talk, or type here."></textarea><button type="button" class="mic" id="fbmic" aria-label="Microphone: speak your feedback" aria-pressed="false"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></span></button></div>
+<div class="live" id="fblive" aria-live="polite"></div>
+<label for="fbemail">Your email (optional, only if you want a reply)</label>
+<input type="email" id="fbemail" autocomplete="email" data-hmr-nomic>
+<div class="row" style="margin-top:.7rem"><button type="button" class="btn" id="fbsend">Send to the dashboard makers</button></div>
+<p class="status" id="fbstat" role="status"></p>
+</div>
+<button type="button" class="linkbtn" id="noask">Don't ask me again</button>
+</div>
+</section>
+
+<!-- ============ FAMILY ============ -->
+<section id="family" role="tabpanel" aria-labelledby="t-family" hidden>
+<div class="intro" data-intro="family"><p><b>Family.</b> One place for your family's missions, school, progress, calendar, and an optional well-being check. Private to you.</p><button type="button" class="btn small ghost" data-hide>Don't show this again</button></div>
+
+<div class="card">
+<h1>Family dashboard</h1>
+<p style="margin-top:.6rem">Example family, all made up: <b>Mom</b>, <b>Dad</b>, <b>Riley</b> (14), <b>Avery</b> (11) and <b>Max</b> (7). It is a place to talk and plan together, never a verdict on anyone.</p>
+<p class="disc">"Everybody should have a mission statement." "What I want to do is arm families with this ability to communicate better."</p>
+</div>
+
+<div class="card">
+<h2>Mission statements</h2>
+<p class="disc" style="margin-top:.4rem">One for everyone. Parents help the kids write theirs. Edit any of them; your changes stay in this browser.</p>
+<div class="grid mis" id="missions"></div>
+</div>
+
+<div class="card">
+<h2>School <span class="badge plan">Teacher sharing: coming later</span></h2>
+<p class="disc" style="margin-top:.4rem">What each child is learning, and notes from teachers. Today you add teacher notes yourself: paste them, forward them to your AI, or say them.</p>
+<div class="grid">
+<div><p class="who">Riley <small>Grade 9</small></p><p><b>Learning:</b> Biology (cells), Algebra I, a history project on bridges.</p><p class="disc">Note from the science teacher: "Great questions in lab this week. Ask Riley about the onion cells."</p></div>
+<div><p class="who">Avery <small>Grade 6</small></p><p><b>Learning:</b> Fractions, a book report, learning recorder in music.</p><p class="disc">Note from the homeroom teacher: "Avery helped a new student find their way all week."</p></div>
+<div><p class="who">Max <small>Grade 2</small></p><p><b>Learning:</b> Reading short chapter books, adding to 100, the weather.</p><p class="disc">Note from the class teacher: "Max is working on taking turns during reading time."</p></div>
+</div>
+</div>
+
+<div class="card">
+<h2>Progress, side by side</h2>
+<p class="disc" style="margin-top:.4rem">So everyone knows why rewards differ. Parents decide whether the kids see this view.</p>
+<label class="sw"><input type="checkbox" id="kidsee" checked> The kids can see this view</label>
+<div class="tblw" style="margin-top:.6rem"><table>
+<thead><tr><th>Goal this month</th><th>Riley</th><th>Avery</th><th>Max</th></tr></thead>
+<tbody>
+<tr><td>Reading</td><td>2 of 3 books</td><td>3 of 3 books</td><td>12 of 15 stories</td></tr>
+<tr><td>Math</td><td>B+, up from B</td><td>A-</td><td>Adding to 100: almost</td></tr>
+<tr><td>Chores done</td><td>18 of 20</td><td>15 of 20</td><td>10 of 12</td></tr>
+<tr><td>Reward</td><td>Pick Saturday's movie</td><td>Extra hour of a game</td><td>Park trip with Dad</td></tr>
+</tbody></table></div>
+<p class="disc" id="whyrew" style="margin-top:.6rem"><b>Why rewards differ:</b> each child set their own goal with Mom and Dad, matched to their age. Avery finished every book, Riley raised a math grade, and Max read almost every night.</p>
+</div>
+
+<div class="card">
+<h2>Family calendar <span class="badge plan">Real syncing: coming later</span></h2>
+<p class="disc" style="margin-top:.4rem">Every family calendar in one view, one color per person. In your real dashboard, your AI shows only the calendars it can actually read.</p>
+<div class="cal" id="cal"></div>
+<div class="legend"><span><i class="p0"></i>Mom</span><span><i class="p1"></i>Dad</span><span><i class="p2"></i>Riley</span><span><i class="p3"></i>Avery</span><span><i class="p4"></i>Max</span><span><i class="pall"></i>Everyone</span></div>
+<p class="disc" style="margin-top:.7rem">Later, with everyone's yes: optional location sharing, and a heads-up for the host, like "Grandma arrives in 5 minutes." Not built yet.</p>
+</div>
+
+<div class="card" id="wb">
+<h2>Well-being check <span class="badge">Optional</span></h2>
+<p style="margin-top:.5rem">Everyone can rate everyone, themselves included, so no one feels singled out. Healthy traits are here too.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))">
+<div><label for="wbwho">Who is being rated</label><select id="wbwho"><option>Mom</option><option>Dad</option><option selected>Riley</option><option>Avery</option><option>Max</option></select></div>
+<div><label for="wbby">Rated by</label><select id="wbby"><option selected>Mom</option><option>Dad</option><option>Riley</option><option>Avery</option><option>Max</option></select></div>
+</div>
+<p class="disc" style="margin-top:.6rem">Tap a zone. It looks like a slider, but each zone is a button. 3 in the middle is about average for most people. 1 is exceptionally strong. 5 is a real struggle.</p>
+<div id="traits"></div>
+<div class="warn" id="skipwarn" hidden role="status">Use this sparingly. Blind spots make the picture less useful. You can still skip any you want.</div>
+<p class="status" id="wbcount" role="status"></p>
+<div class="row"><button type="button" class="btn" id="wbdone">Mark complete</button><button type="button" class="btn ghost" id="wbreset">Start over</button></div>
+<div id="wbsum" hidden style="margin-top:1rem"></div>
+<p class="disc" style="margin-top:1rem"><b>This is not a medical tool or a diagnosis, and it is not accepted medical practice.</b> It is a way for a family to talk. If anyone may be unsafe, talk in person, soon and calmly, and get professional help.</p>
+</div>
+
+<div class="card">
+<h2>Who can see this</h2>
+<p style="margin-top:.5rem"><b>Today: only you.</b> Your family dashboard is private to you and your AI.</p>
+<p><b>The plan:</b> every family member opens it on their own device. If parents choose, teachers add school notes and doctors fill in the well-being check after visits. A family website with photos, private or public. <span class="badge plan">Needs accounts: coming later</span></p>
+<p>"I know that my model is not perfect, and that's why I'm putting these microphone buttons on there, is because all of you can contribute to make it better and better and better."</p>
+<button type="button" class="btn ghost" id="famfb">Tell us how to make this better</button>
+</div>
+</section>
+
+<section id="added" role="tabpanel" hidden></section>
+
+<p class="foot"><button type="button" class="linkbtn" id="showintros">Show all intros again</button> · <button type="button" class="linkbtn" id="resetdemo">Reset this demo</button> · Free forever, no ads. Your own dashboard is built by your AI from the free text on <a href="/">personaldash.life</a>.</p>
+</main>
+
+<script>
+(function(){
+var d=document,$=function(s,c){return(c||d).querySelector(s)},$$=function(s,c){return[].slice.call((c||d).querySelectorAll(s))};
+function get(k){try{return localStorage.getItem('pdDemo.'+k)}catch(e){return null}}
+function set(k,v){try{if(v===null)localStorage.removeItem('pdDemo.'+k);else localStorage.setItem('pdDemo.'+k,v)}catch(e){}}
+
+/* ---------- tabs ---------- */
+function tabs(){return $$('#tabs .tab')}
+function show(id){
+  tabs().forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on?'true':'false');var p=d.getElementById(t.getAttribute('aria-controls'));if(p)p.hidden=!on});
+  if(location.hash.slice(1)!==id)history.replaceState(null,'','#'+id);
+}
+d.getElementById('tabs').addEventListener('click',function(e){var t=e.target.closest('.tab');if(t)show(t.getAttribute('aria-controls'))});
+d.getElementById('tabs').addEventListener('keydown',function(e){var ts=tabs(),i=ts.indexOf(d.activeElement);if(i<0)return;if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();var n=ts[(i+(e.key==='ArrowRight'?1:ts.length-1))%ts.length];n.focus();n.click()}});
+
+/* ---------- intros: only "Don't show this again" ---------- */
+function intros(){$$('[data-intro]').forEach(function(b){b.hidden=get('intro.'+b.getAttribute('data-intro'))==='hide'})}
+d.addEventListener('click',function(e){var h=e.target.closest('[data-hide]');if(!h)return;var b=h.closest('[data-intro]');set('intro.'+b.getAttribute('data-intro'),'hide');b.hidden=true});
+$('#showintros').addEventListener('click',function(){$$('[data-intro]').forEach(function(b){set('intro.'+b.getAttribute('data-intro'),null)});intros()});
+
+/* ---------- voice typing with live text ---------- */
+var SR=window.SpeechRecognition||window.webkitSpeechRecognition,cur=null;
+function mic(btn,onText,onEnd,liveEl){
+  btn.addEventListener('click',function(){
+    if(cur&&cur.btn===btn){cur.rec.stop();return}
+    if(cur)cur.rec.stop();
+    if(!SR){liveEl.textContent='Voice typing does not work in this browser. Type instead, or use the microphone on your keyboard.';return}
+    var rec=new SR(),fin='';rec.lang=d.documentElement.lang||'en-US';rec.interimResults=true;rec.continuous=true;
+    cur={btn:btn,rec:rec};btn.classList.add('on');btn.setAttribute('aria-pressed','true');
+    liveEl.innerHTML='<b>Recording.</b> Your words appear here as you talk. Press the microphone again to stop.';
+    rec.onresult=function(ev){var tmp='';for(var i=ev.resultIndex;i<ev.results.length;i++){var r=ev.results[i];if(r.isFinal)fin+=r[0].transcript+' ';else tmp+=r[0].transcript}onText(fin,tmp);liveEl.innerHTML='<b>Recording.</b> '+esc((fin+tmp).trim()||'...')};
+    rec.onerror=function(ev){liveEl.textContent=ev.error==='not-allowed'?'Your browser blocked the microphone. Allow it in the address bar, or type instead.':'The microphone stopped. If no words appeared, it was not recording. Try again, or type.'};
+    rec.onend=function(){btn.classList.remove('on');btn.setAttribute('aria-pressed','false');if(cur&&cur.rec===rec)cur=null;onEnd(fin.trim())};
+    try{rec.start()}catch(e){liveEl.textContent='The microphone could not start. Try again, or type.'}
+  });
+}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+/* ---------- welcome: three simple changes ---------- */
+var COLORS={green:'#e3f6e8',blue:'#e2eeff',purple:'#f1e6ff',pink:'#ffe6f0',yellow:'#fff6c8',orange:'#ffe9d6',gray:'#efefef',grey:'#efefef',white:'#ffffff',red:'#ffe1dc'};
+var CYCLE=['#e2eeff','#e3f6e8','#f1e6ff','#ffe6f0','#fff6e0'];
+function applyState(){
+  var c=get('color');d.body.style.setProperty('--bg',c||'');d.body.style.background=c||'';
+  d.body.classList.remove('pd-serif','pd-round');var f=get('font');if(f)d.body.classList.add(f);
+  var t=get('tab');var old=d.getElementById('t-added');
+  if(t){if(!old){old=d.createElement('button');old.type='button';old.className='tab';old.setAttribute('role','tab');old.id='t-added';old.setAttribute('aria-controls','added');old.setAttribute('aria-selected','false');d.getElementById('tabs').appendChild(old)}
+    old.textContent=t;var p=d.getElementById('added');p.setAttribute('aria-labelledby','t-added');
+    p.innerHTML='<div class="intro" data-intro="added"><p><b>'+esc(t)+'.</b> Your new tab. Your AI fills it with what you care about.</p><button type="button" class="btn small ghost" data-hide>Don\'t show this again</button></div><div class="card addedtab"><h1>'+esc(t)+'</h1><p style="margin-top:.6rem">In your real dashboard, your AI fills this tab for you: news, ideas, dates, and links about '+esc(t.toLowerCase())+', from what you tell it and what it can reach.</p><p class="disc">This is a demo, so it stays empty. Press the microphone on your real dashboard and say what you want here.</p></div>';intros()}
+  else if(old){old.remove();d.getElementById('added').innerHTML=''}
+  var done=get('done')==='1';$('#great').hidden=!done;
+  $('#valuecard').hidden=!(done&&get('noask')!=='1');
+}
+function did(msg){set('done','1');applyState();$('#trystat').textContent=msg;$('#great').scrollIntoView({behavior:'smooth',block:'center'})}
+function doColor(word){var c=word&&COLORS[word];if(!c){var i=CYCLE.indexOf(get('color')||'#fff6e0');c=CYCLE[(i+1)%CYCLE.length]}set('color',c);did('Done. Your dashboard has a new color. That took less than a second.')}
+function doFont(){var f=get('font');set('font',f==='pd-serif'?'pd-round':(f==='pd-round'?null:'pd-serif'));did('Done. Your dashboard has a new font.')}
+function doTab(topic){topic=(topic||'').trim().replace(/[.!?]+$/,'');if(!topic){$('#tabask').hidden=false;$('#tabtopic').focus();return}
+  topic=topic.charAt(0).toUpperCase()+topic.slice(1);if(topic.length>28)topic=topic.slice(0,28);set('tab',topic);$('#tabask').hidden=true;did('Done. You have a new tab called "'+topic+'". Find it next to Family at the top.')}
+d.addEventListener('click',function(e){var b=e.target.closest('[data-try]');if(!b)return;var k=b.getAttribute('data-try');if(k==='color')doColor();else if(k==='font')doFont();else doTab('')});
+$('#tabgo').addEventListener('click',function(){doTab($('#tabtopic').value)});
+$('#tabtopic').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();doTab(this.value)}});
+function understand(s){
+  var t=s.toLowerCase();
+  var m=t.match(/(?:tab|page|section)\s+(?:about|for|on|called)\s+(.+)$/);if(m)return doTab(m[1]);
+  if(/\btab\b/.test(t))return doTab('');
+  if(/\bfont|letters|writing|typeface/.test(t))return doFont();
+  for(var w in COLORS)if(t.indexOf(w)>=0)return doColor(w);
+  if(/colou?r/.test(t))return doColor('');
+  $('#trystat').textContent='I heard: "'+s+'". In your real dashboard, your AI would work out what you mean. In this demo, try "make it green", "change the font", or "add a tab about gardening".';
+}
+mic($('#trymic'),function(){},function(txt){if(txt)understand(txt);else $('#trylive').textContent='No words came through, so it was not recording. Try again, or tap one of the three buttons.'},$('#trylive'));
+
+/* ---------- Did we provide you any value? ---------- */
+var answer='';
+d.addEventListener('click',function(e){var b=e.target.closest('[data-val]');if(!b)return;answer=b.getAttribute('data-val');$$('[data-val]').forEach(function(x){x.classList.toggle('ghost',x!==b)});$('#fb').hidden=false;$('#fbtext').focus()});
+var base='';
+$('#fbmic').addEventListener('click',function(){if(!cur)base=$('#fbtext').value.replace(/\s*$/,'')},true);
+mic($('#fbmic'),function(fin,tmp){$('#fbtext').value=(base?base+' ':'')+(fin+tmp).trim()},function(){},$('#fblive'));
+$('#fbsend').addEventListener('click',function(){
+  var txt=$('#fbtext').value.trim(),em=$('#fbemail').value.trim(),st=$('#fbstat');
+  if(!txt&&!answer){st.textContent='Press Yes or No, or add a few words first.';return}
+  if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){st.textContent='That email address looks incomplete. Fix it, or leave it empty to send anonymously.';return}
+  var D=window.HMRDock;if(!D||!D.send){st.textContent='The form is still loading. Please try again in a moment.';return}
+  st.textContent='Sending...';
+  var p={kind:'dashboard feedback',subject:'personaldash demo: Did we provide you any value? '+(answer||'(no answer)'),message:'Did we provide you any value? '+(answer||'(no answer)')+'\n\n'+(txt||'(no words)')};if(em)p.email=em;
+  D.send(p).then(function(r){st.textContent=r&&r.ok?'Sent. Thank you so much. We read all of it.':'Your email app should have opened with your message. Your words are still here.'},function(){st.textContent='That did not go through. Please try again in a moment.'});
+});
+$('#noask').addEventListener('click',function(){set('noask','1');$('#valuecard').hidden=true;$('#trystat').textContent='We will not ask again on this device.'});
+$('#famfb').addEventListener('click',function(){set('noask',null);set('done','1');applyState();show('welcome');$('#fb').hidden=false;$('#valuecard').scrollIntoView({behavior:'smooth',block:'center'});$('#fbtext').focus()});
+
+/* ---------- family: missions ---------- */
+var FAM=['Mom','Dad','Riley','Avery','Max'];
+var MIS={Mom:'Raise kind, curious kids, and keep our home a place where everyone feels heard.',Dad:'Show up every day, keep learning, and make time for the people I love.',Riley:'Learn how things work and build something that helps people. (Written with Mom\'s help.)',Avery:'Be a good friend, read every book I can, and be brave about new things. (Written with Dad\'s help.)',Max:'Be nice, try my best, and have fun. (Written with Mom and Dad.)'};
+var mw=$('#missions');FAM.forEach(function(n){var w=d.createElement('div');var id='mis-'+n.toLowerCase();w.innerHTML='<label for="'+id+'">'+n+'</label><textarea id="'+id+'"></textarea>';var ta=w.querySelector('textarea');ta.value=get('mis.'+n)||MIS[n];ta.addEventListener('input',function(){set('mis.'+n,ta.value)});mw.appendChild(w)});
+$('#kidsee').addEventListener('change',function(){this.parentNode.lastChild.textContent=this.checked?' The kids can see this view':' Only Mom and Dad see this view'});
+
+/* ---------- family: calendar ---------- */
+var DAYS=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+var EV=[[0,'p2','3:30 Soccer practice'],[0,'p0','7:00 Book club'],[1,'p4','4:00 Swim lesson'],[1,'p1','Late meeting, home 7:30'],[2,'p3','3:45 Recorder lesson'],[2,'pall','6:00 Family dinner, no phones'],[3,'p2','Science project due'],[3,'p0','12:00 Lunch with a friend'],[4,'p4','Pajama day at school'],[4,'pall','7:00 Movie night'],[5,'p1','9:00 Park with Max'],[5,'p2','2:00 Soccer game'],[5,'p3','4:00 Birthday party'],[6,'pall','1:00 Lunch at Grandma\'s'],[6,'p0','Plan the week, 20 min']];
+var cal=$('#cal');DAYS.forEach(function(dn,i){var c=d.createElement('div');c.className='day';c.innerHTML='<h4>'+dn+'</h4>'+EV.filter(function(e){return e[0]===i}).map(function(e){return'<div class="ev '+e[1]+'">'+esc(e[2])+'</div>'}).join('');cal.appendChild(c)});
+
+/* ---------- family: well-being check, 1-5 bell curve that works like buttons ---------- */
+var TRAITS=['Patience','Humor','Curiosity','Kindness','Focus','Sleep','Handling stress','Talking about feelings'];
+var BELL='<svg viewBox="0 0 500 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 58 C120 58 160 4 250 4 C340 4 380 58 500 58 Z"/></svg>';
+var LABELS={1:'1, exceptionally strong',2:'2, a strength',3:'3, about average',4:'4, some struggle',5:'5, a real struggle'};
+var state={},skips=0;
+function key(){return $('#wbwho').value+'|'+$('#wbby').value}
+function load(){try{state=JSON.parse(get('wb.'+key())||'{}')}catch(e){state={}}skips=+(get('wbskips')||0)}
+function save(){set('wb.'+key(),JSON.stringify(state))}
+function render(){
+  load();var box=$('#traits');box.innerHTML='';
+  TRAITS.forEach(function(tr,ti){
+    var v=state[tr],off=v==='skip';var div=d.createElement('div');div.className='trait'+(off?' off':'');
+    var z='';for(var n=1;n<=5;n++)z+='<button type="button" class="zone" role="radio" aria-checked="'+(v===n?'true':'false')+'" tabindex="'+((v===n||(!v||off)&&n===3)?0:-1)+'" aria-label="'+LABELS[n]+'" data-n="'+n+'"><span>'+n+'</span></button>';
+    div.innerHTML='<div class="trait-h"><h3 id="tr'+ti+'">'+tr+'</h3><button type="button" class="btn small ghost skip" aria-pressed="'+(off?'true':'false')+'">'+(off?'Fill this one in after all':'I prefer not to fill this one in')+'</button></div><div class="bell">'+BELL+'<div class="track"></div><div class="zones" role="radiogroup" aria-labelledby="tr'+ti+'">'+z+'</div></div><div class="scale-l"><span>1 exceptionally strong</span><span>3 about average</span><span>5 a real struggle</span></div>';
+    div.querySelector('.zones').addEventListener('click',function(e){var b=e.target.closest('.zone');if(!b)return;state[tr]=+b.getAttribute('data-n');save();render();var nb=$$('.trait')[ti].querySelector('.zone[data-n="'+state[tr]+'"]');if(nb)nb.focus()});
+    div.querySelector('.zones').addEventListener('keydown',function(e){var b=e.target.closest('.zone');if(!b)return;var n=+b.getAttribute('data-n');if(e.key==='ArrowRight'||e.key==='ArrowUp')n=Math.min(5,n+1);else if(e.key==='ArrowLeft'||e.key==='ArrowDown')n=Math.max(1,n-1);else return;e.preventDefault();state[tr]=n;save();render();$$('.trait')[ti].querySelector('.zone[data-n="'+n+'"]').focus()});
+    div.querySelector('.skip').addEventListener('click',function(){if(state[tr]==='skip'){delete state[tr]}else{state[tr]='skip';skips++;set('wbskips',String(skips))}save();render();$$('.trait')[ti].querySelector('.skip').focus()});
+    box.appendChild(div);
+  });
+  $('#skipwarn').hidden=skips<3;
+  var ans=0,bl=0;TRAITS.forEach(function(t){if(state[t]==='skip')bl++;else if(state[t])ans++});
+  $('#wbcount').textContent=ans+' of '+TRAITS.length+' filled in'+(bl?', '+bl+' left as blind spots':'')+'. '+$('#wbby').value+' rating '+$('#wbwho').value+'.';
+}
+$('#wbwho').addEventListener('change',function(){$('#wbsum').hidden=true;render()});
+$('#wbby').addEventListener('change',function(){$('#wbsum').hidden=true;render()});
+$('#wbreset').addEventListener('click',function(){state={};save();set('wbskips',null);$('#wbsum').hidden=true;render()});
+$('#wbdone').addEventListener('click',function(){
+  load();var rows=[],blind=[],open=[];
+  TRAITS.forEach(function(t){var v=state[t];if(v==='skip')blind.push(t);else if(v)rows.push('<li><b>'+t+':</b> '+LABELS[v]+'</li>');else open.push(t)});
+  var s=$('#wbsum');s.hidden=false;
+  s.innerHTML='<h3>'+(open.length?'Almost done':'100% complete')+'</h3><p class="disc" style="margin-top:.3rem">'+esc($('#wbby').value)+' rating '+esc($('#wbwho').value)+'. Stays in this browser.</p><ul class="sum">'+(rows.join('')||'<li>No traits rated yet.</li>')+'</ul>'+(blind.length?'<p style="margin-top:.6rem"><b>Blind spots:</b> '+blind.join(', ')+'. Left out on purpose, and that is okay.</p>':'')+(open.length?'<p><b>Still open:</b> '+open.join(', ')+'. Rate them, or press "I prefer not to fill this one in".</p>':'')+'<p class="disc">Compare with how the others rated the same person, and talk about the differences together.</p>';
+});
+
+/* ---------- reset + start ---------- */
+$('#resetdemo').addEventListener('click',function(){try{Object.keys(localStorage).forEach(function(k){if(k.indexOf('pdDemo.')===0)localStorage.removeItem(k)})}catch(e){}location.hash='welcome';location.reload()});
+intros();applyState();render();
+var h=location.hash.slice(1);if(h==='added'&&!get('tab'))h='welcome';show(d.getElementById(h)&&/^(welcome|family|added)$/.test(h)?h:'welcome');
+addEventListener('hashchange',function(){var h=location.hash.slice(1);if(/^(welcome|family|added)$/.test(h)&&d.getElementById('t-'+h))show(h)});
+})();
+</script>
+<script src="../hmr-dock.js?v=6.8.2" data-site="personaldash.life" defer></script>
+</body></html>

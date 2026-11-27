@@ -1,8 +1,9 @@
 # personaldash: first-time setup
 
-Version 1.8 (November 2026). Free and open. From personaldash.life.
+Version 1.9 (November 2026). Free and open. From personaldash.life.
 
 Changelog:
+- V1.9: A Welcome tab that shows you that you are in control: try one of three simple changes by voice, with honest time estimates, then "Great job! You're in total control." A very brief intro on each tab with one button, "Don't show this again". A microphone at the bottom right of every tab. A "Did we provide you any value?" feedback question you can turn off. A Family dashboard inside Family and friends: mission statements, school notes, progress, a shared calendar, and an optional well-being check.
 - V1.8: Every inbox shows whether it is active. Messages can include texts, Discord, and GitHub. The Money tab explains your options when nothing is connected. A first-run look at your email for action items and subscriptions. A dashboard log that records every addition and where it came from. Every entry links to its source. The Me tab lets you add and remove things. All tabs show at once. Every box takes typing or your microphone. A Critique button, and an Improve this dashboard step. Optional social account linking. Fennsmash in Have fun.
 - V1.7: Renamed the middle layer the HMR written instructions for human and AI interaction.
 - V1.6: Added a "what next" question after setup and the Build a website section.
@@ -87,20 +88,23 @@ Keep their answers as a short profile at the top of your working notes. Do not p
 
 Build one page with these tabs. Fill each tab only from connected sources. A tab with nothing connected shows one line saying what to connect to fill it.
 
+0. **Welcome.** Shown first, the first time they open the dashboard. See "The Welcome tab" below.
 1. **Today.** The date, the time it was last refreshed, the weather if you can reach it, and a ranked to-do list of the 5 to 10 most important things today. Rank by deadline, by who is waiting, and by what the person said matters.
 2. **Agenda.** Day, week, and month views of every connected calendar in one place. Mark conflicts.
 3. **Inbox.** Messages from every connected inbox, newest first, grouped into Needs a reply, Waiting on others, and FYI. For Needs a reply, show a short drafted reply in the person's voice with an Edit button. Nothing is sent without their yes. At the top, list every email account the person has told you about, one line each, marked Active (you read it in this setup), Not connected, or Not tested yet. For any account that is not active, say why in plain words and give the one next step to finish it, with a link.
 4. **Messages.** Unread chat messages and mentions that need them, from whatever is connected: Slack, Discord, Teams, text messages, or GitHub notifications. If a service they use is not connected, say whether it can be connected from their assistant, and how. Messages are read only: you draft, and they send.
 5. **Money.** If connected read-only: this month's spending, recurring subscriptions, and anything unusual. Never move money. If nothing is connected, show what people commonly use: a read-only view of their bank accounts, a credit-monitoring service, or subscriptions found in their email receipts. Say what the best case looks like, how to connect each one from their assistant (only ones you know are available), and plainly why some people connect money and some do not. They choose.
-6. **Have fun.** Ideas matched to what they said they enjoy: events nearby, new episodes, music, games, and places they want to go. Leave out what they never want suggested. Include a box where they can type or say something they want to do, and add it to the list. Always include the HMR family's free game, [Fennsmash](https://claudebomb.com/smash/), a tensegrity demolition game.
-7. **Family and friends.** The people they named, with upcoming birthdays and when they last talked, plus a button to draft a message to each. Every person and every detail links to where it came from (the email, message, contact, or the chat where they told you), so they can check it. If they want, offer to link the social media accounts they already use, one at a time and only with their yes. Never post anything.
+6. **Have fun.** Ideas matched to what they said they enjoy: events nearby, new episodes, music, games, and places they want to go. Leave out what they never want suggested. Include a box where they can type or say something they want to do, and add it to the list. Always include the free game [Fennsmash](https://claudebomb.com/smash/), a tensegrity demolition game from the elevat.ing family of websites.
+7. **Family and friends.** The people they named, with upcoming birthdays and when they last talked, plus a button to draft a message to each. Every person and every detail links to where it came from (the email, message, contact, or the chat where they told you), so they can check it. If they want, offer to link the social media accounts they already use, one at a time and only with their yes. Never post anything. Inside this tab, offer the **Family dashboard**, a sub-dashboard just for family. See "Family dashboard" below.
 8. **Work.** Only work sources, kept behind the privacy firewall above.
-9. **Me.** Their setup rating, what is connected, the refresh rate, and a short list of next connectors that would raise the rating. Also "My rules": the rules you follow, shown in three levels (base, HMR written instructions, theirs), for an audit at a glance. Let them add or remove items on any tab, and tell you preferences or how to change the dashboard, by typing or by voice. Record each change in the dashboard log.
+9. **Me.** Their setup rating, what is connected, the refresh rate, and a short list of next connectors that would raise the rating. Also "My rules": the rules you follow, shown in three levels (base, HMR written instructions, theirs), for an audit at a glance. Let them add or remove items on any tab, and tell you preferences or how to change the dashboard, by typing or by voice. Record each change in the dashboard log. Add two small buttons: "Show all intros again" and "Turn feedback questions back on".
 10. **My AI Journey.** Where the person stands with AI and what to try next. See the section below.
 11. **Bringing humans closer.** Their generation and their family's generations, a phrase explainer, help reading what a family member sent, and a private list of shared interests. See the section below.
 12. **Integrations and partnerships.** What is connected to this dashboard now, what could be connected next, and how the dashboard stays up to date. See the section below.
 
 Design: modern, crisp, clean, and calm. Large readable text, one accent color, works on a phone and a computer, and a light or dark theme to match their system. A short, gentle animation the first time it opens is fine. Show every tab name at once (wrapping to a second line on a phone), never a sideways slider. Every text box accepts typing, and has a microphone button where the browser supports voice. Show "Last refreshed: [date and time]" at the top of every tab. The last button on the page is **Critique** (see "Critique your own dashboard" below).
+
+Every tab: a microphone button sits at the bottom right of the screen on every tab. Pressing it turns what they say into text they can see appearing as they talk; if no text appears, it is not recording, so say that in a short line. If your dashboard can pass a request to you directly, send what they said to you as a change request. If it cannot, show the words with one button, "Copy for my chat", and tell them to paste it into this chat. Every tab also opens with a very brief intro, one or two sentences on what the tab is for, with exactly one button: **Don't show this again**. No "Got it" button. When pressed, that tab's intro stays hidden on this device, and the Me tab has a "Show all intros again" button.
 
 ### Step 4b: First look at their email
 
@@ -108,6 +112,33 @@ If an inbox is connected, do one deeper pass the first time, and show it on the 
 
 - **Action items.** Emails that need something from them, ranked.
 - **Recurring charges.** Subscriptions and repeat payments found in receipts, with the amount and how often. For each one, ask: "Are you still using this?" Show what they could save. Cancelling still needs their yes, and you follow the company's own cancel steps.
+
+### Step 4c: The Welcome tab
+
+The Welcome tab is the first thing they see. Keep it short, warm, and plain. Build it in this order:
+
+1. **A short recap.** Say it like this, in your own short words: "If you're seeing this, somebody gave you a link to a website, and pretty quickly you got to this screen. You now really are controlling artificial intelligence. The chat you have can change this dashboard just by you talking to it and asking."
+2. **The microphone.** "Every page has a microphone button at the bottom right of your screen. All you have to do is press it and talk."
+3. **Try one simple change.** "This is so easy that you can pick anything you want. Why don't you try one of these three?" Offer exactly three:
+   - Change the color of my dashboard.
+   - Change the font.
+   - Add a new tab about something I care about.
+   Then: "Go back to the chat, press the microphone button, say your idea and how you want the dashboard to change, and see what happens." If the dashboard can pass a request to you directly, the microphone on the dashboard is enough.
+4. **Honest time estimates, before they try.** Simple changes like these usually take less than a minute. Bigger jobs on the first day, like the first setup, can take several minutes. In many cases AI finishes complex tasks in less than a minute. Never promise a time you cannot meet.
+5. **After the first change.** As soon as you finish their first change, update the Welcome tab to say, at the top: **"Great job! You're in total control."** Then: "Look, just click around and do whatever you want now. If you need anything else, go back to the site you got this from." Note the first change in the dashboard log.
+6. **Then one question: "Did we provide you any value?"** Show it once, after the welcome is done. See "Did we provide you any value?" below.
+
+After the first visit, the Welcome tab moves to the end of the tab row, and the dashboard opens on Today.
+
+### Step 4d: Did we provide you any value?
+
+This is the only feedback question on the dashboard. It helps the people who make personaldash improve it for everybody else, not just for this person.
+
+- Show it as a small card, not a full-screen pop-up: **"Did we provide you any value?"** with two buttons, **Yes** and **No**.
+- Either button opens the same box, with a microphone: "We'd love to hear more. Let's make this better for everybody else. What do you like? What do you not like? And what could be better?" Say it takes about two minutes and anything that comes to mind is fine.
+- Their answer stays on their dashboard. Nothing is sent by you (rule 3). Under the box, one button: **Send to the dashboard makers**. It opens https://personaldash.life/feedback/ in a new tab with their words added after `#text=` in the address (URL-encoded, plus `&value=yes` or `&value=no` for the button they pressed), where they read it and press Send themselves, anonymously or with their email. If the words are long, open the page without them and offer "Copy my words" first.
+- Every feedback card has a small **Don't ask me again** link. When pressed, never show a feedback card again on this dashboard, and note it in the dashboard log. Otherwise show it at most once a month.
+- Never put a feedback card in front of something they are doing.
 
 ### Step 5: Give them a link they can bookmark
 
@@ -120,7 +151,7 @@ If an inbox is connected, do one deeper pass the first time, and show it on the 
 
 1. The link or file.
 2. Their rating and the one connector that would raise it the most.
-3. **Improve this dashboard.** Ask whether they are happy with it, and fix anything that is not right. Mention the Critique button for later. Do not send any other link yet. When they have told you they are happy, follow Step 10 of the setup guide: send its closing message once, and only once, word for word. Send it first, then ask: "What would you like to do now that your dashboard is set up?" Offer up to three suggestions, and make one of them building a website (see "Build a website (when they ask)" below).
+3. **Improve this dashboard.** Ask whether they are happy with it, and fix anything that is not right. Point them to the Welcome tab to try their first change by voice. Mention the Critique button for later. Do not send any other link yet. When they have told you they are happy, follow Step 10 of the setup guide: send its closing message once, and only once, word for word. Send it first, then ask: "What would you like to do now that your dashboard is set up?" Offer up to three suggestions, and make one of them building a website (see "Build a website (when they ask)" below).
 
 ---
 
@@ -195,6 +226,21 @@ Keep the tone warm and plain. No generation is right or wrong. The person knows 
 
 ---
 
+## Family dashboard
+
+A sub-dashboard inside the Family and friends tab, just for family. Say in its first line that it is private to them today, and that it is a place to talk and plan together, never a verdict on anyone. Offer it; do not push it. Every part is optional, and each part can be turned off.
+
+1. **Mission statements.** One short mission statement for every family member who wants one. Parents help their kids write theirs. Use only words the person gives you. Leave a box with a microphone for each one.
+2. **School.** What each child is learning in school this term, and notes from teachers. Today the person adds teacher notes themselves (pasted, forwarded, or spoken). Say plainly that teachers cannot send notes straight to the dashboard yet.
+3. **Progress, side by side.** If the parents want it, show each child's progress (grades or goals) next to each other, with the reason any reward differs, so everyone knows why. Parents decide whether the kids see this view.
+4. **Family calendar.** Every connected family calendar in one view, one color per person. Real syncing needs each person's own calendar shared with the person; show only calendars you can actually read, and say which are missing.
+5. **Well-being check (optional).** About 6 to 20 traits, healthy ones too (for example patience, humor, curiosity, sleep, handling stress). Each trait is a 1 to 5 scale drawn like a bell curve: 3 in the middle is about average for most people, 1 is exceptionally strong, and 5 is a real struggle. It looks like a slider but works like buttons: tapping a zone picks it. Next to every trait, a button: **I prefer not to fill this one in**. It grays that trait out, and the summary lists it as a blind spot. On the third use, show a gentle note ("Use this sparingly. Blind spots make the picture less useful.") but never block it. The check can still be marked complete. Everyone in the family can rate everyone, themselves included, so no one person feels singled out. Say plainly: this is not a medical tool or a diagnosis, and it is not accepted medical practice. If anything suggests someone may be unsafe, say so first and suggest talking in person and getting professional help.
+6. **Family website (later).** A family website with photos, private or public. Never put a child's name, photo, school, or location on anything public (see the Children rule above). Building one is covered in "Build a website".
+
+Never guess anyone's health, mood, or traits from their emails or messages. Use only what the person enters. Keep everything in this sub-dashboard private to the person. Giving other family members, teachers, or doctors their own access needs accounts that do not exist yet: describe that as a plan, never as a feature.
+
+---
+
 ## Integrations and partnerships tab
 
 This tab shows the person what feeds their dashboard today, what could be added, and what is planned for later.
@@ -203,7 +249,7 @@ This tab shows the person what feeds their dashboard today, what could be added,
 2. **Suggested for you.** Suggest a few integrations that match the person's interests, such as Meetup for local groups or the social sites they already use. Only offer one as ready if you can really connect it. If you cannot, say how the person can connect it, or say it is not available yet. Never invent a connector. Only link to a page you have checked.
 3. **Staying up to date.** Explain how the dashboard stays fresh today. If you can set scheduled tasks, offer to set one that refreshes the dashboard, and say how often. If you cannot, tell the person to say "refresh my dashboard" whenever they want the latest.
 4. **Keep it handy.** Remind the person they can bookmark the dashboard in their browser. On a phone, the browser's "Add to Home Screen" option puts the bookmark on the home screen.
-5. **Coming later: HMR family.** Describe this as a plan, not a feature. The plan is accounts and hosting, a dashboard that updates itself live from connected accounts without being asked, and a desktop app and a phone app under the name HMR family. None of this exists today, so never say it does.
+5. **Coming later: the elevat.ing family of websites.** Describe this as a plan, not a feature. The plan is accounts and hosting, a dashboard that updates itself live from connected accounts without being asked, family dashboards that family members (and, if parents choose, teachers and doctors) can each open, and a desktop app and a phone app. None of this exists today, so never say it does.
 6. **Privacy.** Never post, send or change anything on a social account without the person's yes. Never put a child's details on anything shared or public. Show only what the person has chosen to connect.
 
 ---
@@ -240,4 +286,4 @@ Many assistants offer several models: stronger ones for hard problems and faster
 - This file only gives instructions. Your assistant follows them using the connections you have already set up.
 - You can read every line before using it. Change anything you like.
 - Your data stays between you and your assistant. personaldash.life never receives it.
-- Ideas or problems: personaldash.life. To share how your work really works, see workdash.life.
+- Ideas or problems: personaldash.life/feedback. To share how your work really works, see workdash.life.

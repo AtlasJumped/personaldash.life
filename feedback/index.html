@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard feedback | personaldash.life</title>
+<meta name="description" content="Tell the people who make personaldash what you like, what you don't like, and what could be better. You read it first, and it goes only when you press Send.">
+<meta name="theme-color" content="#fff6e0">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='12' height='15' rx='3' fill='%23151515'/%3E%3Crect x='17' y='3' width='12' height='9' rx='3' fill='%23ff5a36'/%3E%3Crect x='3' y='20' width='12' height='9' rx='3' fill='%23ff5a36'/%3E%3Crect x='17' y='14' width='12' height='15' rx='3' fill='%23151515'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#fff6e0;--fg:#151515;--mut:#4a463d;--acc:#ff5a36;--yel:#ffd23f;--soft:#fffaf0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.own{font-size:.8rem;text-align:center;padding:.35rem 1rem;background:var(--fg);color:#fff}.own a{color:var(--yel)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.8rem clamp(1rem,4vw,2rem);border-bottom:2px solid var(--fg);background:#fff}
+.logo{font-weight:900;text-decoration:none;font-size:1.1rem}.logo b{color:var(--acc)}
+.wrap{max-width:40rem;margin:0 auto;padding:1.4rem clamp(1rem,4vw,2rem) 7rem}
+h1{font-size:clamp(1.6rem,5vw,2.2rem);line-height:1.15;margin:0 0 .8rem;letter-spacing:-.02em}
+p{margin:0 0 .8rem}
+.card{background:#fff;border:2px solid var(--fg);border-radius:1.25rem;padding:1.1rem 1.2rem;margin:0 0 1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.4rem 1.2rem;border-radius:99px;border:2px solid var(--fg);background:var(--fg);color:var(--yel);font-weight:700;cursor:pointer;text-decoration:none}
+.btn.ghost{background:#fff;color:var(--fg)}
+.row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+label{font-weight:700;font-size:.92rem;display:block;margin:.6rem 0 .25rem}
+textarea,input[type=email]{width:100%;border:2px solid var(--fg);border-radius:.8rem;padding:.6rem .7rem;background:var(--soft)}
+textarea{min-height:9rem;resize:vertical}
+.fbbox{display:flex;gap:.5rem;align-items:flex-start}.fbbox textarea{flex:1}
+.mic{width:2.9rem;height:2.9rem;border-radius:50%;border:2px solid var(--fg);background:conic-gradient(#ff3b30,#ff9500,#ffcc00,#34c759,#007aff,#5856d6,#af52de,#ff3b30);display:inline-grid;place-items:center;cursor:pointer;flex:none}
+.mic span{background:var(--fg);border-radius:50%;width:2.1rem;height:2.1rem;display:grid;place-items:center}
+.mic svg{width:1.3rem;height:1.3rem;fill:none;stroke:#fff;stroke-width:2.2;stroke-linecap:round}
+.mic.on,.mic.on span{background:#e00}
+.live{min-height:1.4rem;font-size:.95rem;margin-top:.3rem}.live b{color:#e00}
+.status{font-size:.92rem;color:var(--mut);min-height:1.2rem;margin:.5rem 0 0}
+.mut{color:var(--mut);font-size:.92rem}
+</style>
+</head>
+<body>
+<div class="own">This website is owned by the person who owns this website. <a href="https://elevat.ing">elevat.ing</a></div>
+<header class="top"><a class="logo" href="/">personal<b>dash</b></a><a class="btn ghost" href="/" style="min-height:2.3rem;font-size:.9rem">personaldash.life</a></header>
+<main class="wrap">
+<h1>Tell the dashboard makers</h1>
+<div class="card">
+<p><b>Did we provide you any value?</b></p>
+<div class="row" role="group" aria-label="Did we provide you any value?"><button type="button" class="btn ghost" data-val="Yes" aria-pressed="false">Yes</button><button type="button" class="btn ghost" data-val="No" aria-pressed="false">No</button></div>
+<p style="margin-top:1rem">We'd love to hear more. Let's make this better for everybody else. <b>What do you like? What do you not like? And what could be better?</b></p>
+<label for="fbtext">Your feedback</label>
+<div class="fbbox"><textarea id="fbtext" placeholder="Press the microphone and talk, or type here."></textarea><button type="button" class="mic" id="fbmic" aria-label="Microphone: speak your feedback" aria-pressed="false"><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></svg></span></button></div>
+<div class="live" id="fblive" aria-live="polite"></div>
+<label for="fbemail">Your email (optional, only if you want a reply)</label>
+<input type="email" id="fbemail" autocomplete="email" data-hmr-nomic>
+<div class="row" style="margin-top:.8rem"><button type="button" class="btn" id="fbsend">Send</button></div>
+<p class="status" id="fbstat" role="status"></p>
+</div>
+<p class="mut">Read it first. Nothing goes anywhere until you press Send. Leave the email empty to send anonymously. Free forever, no ads.</p>
+</main>
+<script>
+(function(){
+var d=document,$=function(s){return d.querySelector(s)},answer='';
+try{var m=location.hash.match(/(?:^#|&)text=([^&]*)/);if(m)$('#fbtext').value=decodeURIComponent(m[1].replace(/\+/g,' ')).slice(0,5000);
+var v=location.hash.match(/(?:^#|&)value=(yes|no)/i);if(v)answer=v[1].charAt(0).toUpperCase()+v[1].slice(1).toLowerCase()}catch(e){}
+function mark(){[].forEach.call(d.querySelectorAll('[data-val]'),function(b){var on=b.getAttribute('data-val')===answer;b.classList.toggle('ghost',!on);b.setAttribute('aria-pressed',on?'true':'false')})}
+mark();
+d.addEventListener('click',function(e){var b=e.target.closest('[data-val]');if(b){answer=b.getAttribute('data-val');mark()}});
+var SR=window.SpeechRecognition||window.webkitSpeechRecognition,rec=null,base='',btn=$('#fbmic'),live=$('#fblive'),ta=$('#fbtext');
+btn.addEventListener('click',function(){
+  if(rec){rec.stop();return}
+  if(!SR){live.textContent='Voice typing does not work in this browser. Type instead, or use the microphone on your keyboard.';return}
+  base=ta.value.replace(/\s*$/,'');var fin='';rec=new SR();rec.lang='en-US';rec.interimResults=true;rec.continuous=true;
+  btn.classList.add('on');btn.setAttribute('aria-pressed','true');live.innerHTML='<b>Recording.</b> Your words appear in the box as you talk. Press the microphone again to stop.';
+  rec.onresult=function(ev){var tmp='';for(var i=ev.resultIndex;i<ev.results.length;i++){var r=ev.results[i];if(r.isFinal)fin+=r[0].transcript+' ';else tmp+=r[0].transcript}ta.value=(base?base+' ':'')+(fin+tmp).trim()};
+  rec.onerror=function(ev){live.textContent=ev.error==='not-allowed'?'Your browser blocked the microphone. Allow it in the address bar, or type instead.':'The microphone stopped. If no words appeared, it was not recording. Try again, or type.'};
+  rec.onend=function(){btn.classList.remove('on');btn.setAttribute('aria-pressed','false');rec=null;if(live.textContent.indexOf('Recording')===0)live.textContent='Stopped. Read it over, then press Send.'};
+  try{rec.start()}catch(e){rec=null;live.textContent='The microphone could not start. Try again, or type.'}
+});
+$('#fbsend').addEventListener('click',function(){
+  var txt=ta.value.trim(),em=$('#fbemail').value.trim(),st=$('#fbstat');
+  if(!txt&&!answer){st.textContent='Press Yes or No, or add a few words first.';return}
+  if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){st.textContent='That email address looks incomplete. Fix it, or leave it empty to send anonymously.';return}
+  var D=window.HMRDock;if(!D||!D.send){st.textContent='The form is still loading. Please try again in a moment.';return}
+  st.textContent='Sending...';
+  var p={kind:'dashboard feedback',subject:'personaldash: Did we provide you any value? '+(answer||'(no answer)'),message:'Did we provide you any value? '+(answer||'(no answer)')+'\n\n'+(txt||'(no words)')};if(em)p.email=em;
+  D.send(p).then(function(r){st.textContent=r&&r.ok?'Sent. Thank you so much. We read all of it.':'Your email app should have opened with your message. Your words are still here.'},function(){st.textContent='That did not go through. Please try again in a moment.'});
+});
+})();
+</script>
+<script src="../hmr-dock.js?v=6.8.2" data-site="personaldash.life" defer></script>
+</body></html>

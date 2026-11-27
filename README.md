@@ -7,4 +7,5 @@ This is the claudebomb dashboard page as it stood on Nov 25, 2026, moved here in
 - Copy text: `setup/claude-setup-guide.md` plus `dashboard/personaldash.md`.
 - `hmr-dock.js` and `hmr-dash.js`: the shared HMR button (Speak, React, Funsies, feedback).
 - Static site, no build step. `CNAME` is `personaldash.life`.
-- Part of the HMR family of websites: https://hmrfamily.life
+- Demo dashboard (Welcome tab and Family dashboard): `demo/index.html`. Feedback page that a person's own dashboard links to: `feedback/index.html`.
+- Part of the elevat.ing family of websites: https://elevat.ing
