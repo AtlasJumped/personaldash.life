@@ -171,7 +171,7 @@ Help them help us with a few prompts: What would you improve in how it looks? Wh
 
 ## My AI Journey tab
 
-This tab shows the person how they use AI today, how that compares with other people, and what to try next. It is a guide, not a grade. Say that in the first line. Think of it as a page that looks after you on your AI journey: it shows what other people like them do, and where they could go next. Only report what you can actually see: the accounts and connectors you can reach, what the person tells you, and what this chat or your memory shows. If you cannot see something, say "I cannot see this" and ask. Never guess usage from nothing, and never invent numbers.
+This tab shows the person how they use AI today, how that compares with other people, and what to try next. It is a guide, not a grade. Say that in the first line. Think of it as a page that looks after the person on their AI journey: it shows what other people like them do, and where they could go next. Only report what you can actually see: the accounts and connectors you can reach, what the person tells you, and what this chat or your memory shows. If you cannot see something, say "I cannot see this" and ask. Never guess usage from nothing, and never invent numbers.
 
 Build the tab in this order:
 
